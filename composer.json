@@ -1,8 +1,8 @@
 {
-	"name": "robksawyer/lathe-tools",
-	"description": "A wiki about lathes.",
-	"keywords": ["lathes", "tools"],
-	"homepage": "https://www.lathe.tools/",
+	"name": "robksawyer/preciousplasticwiki",
+	"description": "A wiki for the Precious Plastic project.",
+	"keywords": ["plastics", "tools"],
+	"homepage": "http://preciousplastic.herokuapp.com/",
 	"authors": [
 		{
 			"name": "MediaWiki Community",
@@ -21,6 +21,7 @@
 	},
 	"require": {
 		"composer/semver": "1.0.0",
+		"composer-plugin-api": "^1.0",
 		"cssjanus/cssjanus": "1.1.1",
 		"ext-iconv": "*",
 		"liuggio/statsd-php-client": "1.0.16",
@@ -36,7 +37,6 @@
 		"wikimedia/utfnormal": "1.0.3",
 		"wikimedia/wrappedstring": "2.0.0",
 		"zordius/lightncandy": "0.21",
-		"easybib/composer-newrelic": "*",
 		"ext-apcu": "*",
 		"ext-fileinfo": "*",
 		"ext-intl": "*",
@@ -44,7 +44,6 @@
 		"pear/mail_mime-decode": "*",
 		"ext-mbstring": "*",
 		"wildbit/postmark-php": "^2.1",
-		"composer-plugin-api": "^1.0",
 		"pear/Net_SMTP": "^1.7",
 		"mediawiki/maps": "*"
 	},
@@ -70,12 +69,6 @@
 		"pear/mail_mime-decode": "Mail sending support",
 		"wikimedia/avro": "Binary serialization format used with kafka"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/easybiblabs/composer-newrelic"
-		}
-	],
 	"autoload": {
 		"psr-0": {
 			"ComposerHookHandler": "includes/composer"

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d4fdb0494d14092e3bd63306771bb874",
-    "content-hash": "66a3f0c86470df3a0b981c9fee882158",
+    "hash": "46e443f42c887655ab5f571a240fd4f2",
+    "content-hash": "f392ecafbf6038347e1604b35370b76b",
     "packages": [
         {
             "name": "composer/installers",
@@ -500,54 +500,6 @@
                 "wikidata"
             ],
             "time": "2014-10-09 19:10:23"
-        },
-        {
-            "name": "easybib/composer-newrelic",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/easybiblabs/composer-newrelic.git",
-                "reference": "6cee8d1fe540903435fbdf950a7f6eb8a8e98095"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/easybiblabs/composer-newrelic/zipball/6cee8d1fe540903435fbdf950a7f6eb8a8e98095",
-                "reference": "6cee8d1fe540903435fbdf950a7f6eb8a8e98095",
-                "shasum": ""
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "EasyBib\\Composer\\NewRelic\\NewRelicPlugin"
-            },
-            "autoload": {
-                "psr-0": {
-                    "EasyBib\\Composer\\NewRelic\\": "src/"
-                }
-            },
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Till Klampaeckel",
-                    "email": "till@php.net",
-                    "homepage": "http://till.klampaeckel.de/"
-                }
-            ],
-            "description": "A composer plugin that allows to tag composer runs in New Relic",
-            "keywords": [
-                "composer",
-                "composer-plugin",
-                "monitoring",
-                "newrelic",
-                "performance",
-                "plugin"
-            ],
-            "support": {
-                "source": "https://github.com/easybiblabs/composer-newrelic/tree/0.2.0",
-                "issues": "https://github.com/easybiblabs/composer-newrelic/issues"
-            },
-            "time": "2013-09-06 12:46:12"
         },
         {
             "name": "guzzlehttp/guzzle",
