@@ -21,6 +21,7 @@ $wgShowExceptionDetails = getenv('SHOW_EXCEPTIONS');
 # $wgDisableOutputCompression = true;
 
 $wgSitename = getenv('SITE_NAME');
+$wgMetaNamespace = getenv('SITE_META_NAME');
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
