@@ -1,0 +1,52 @@
+{
+	"name": "EmbedVideo",
+	"version": "2.3.1",
+	"author": [
+		"Jim R. Wilson",
+		"Andrew Whitworth",
+		"Alexia E. Smith",
+		"Cameron M. Chunn"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:EmbedVideo",
+	"descriptionmsg": "embedvideo_description",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"callback": "EmbedVideoHooks::onExtension",
+	"MessagesDirs": {
+		"EmbedVideo": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"EmbedVideoMagic": "EmbedVideo.i18n.magic.php"
+	},
+	"AutoloadClasses": {
+		"EmbedVideoHooks": "EmbedVideo.hooks.php",
+		"EmbedVideo\\VideoService": "classes/VideoService.php",
+		"EmbedVideo\\OEmbed": "classes/OEmbed.php"
+	},
+	"ResourceModules": {
+		"ext.embedVideo": {
+			"styles": [
+				"css/embedvideo.css"
+			],
+			"scripts": [
+				"js/autoResize.js"
+			],
+			"position": "top",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "EmbedVideo"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"EmbedVideoHooks::onParserFirstCallInit"
+		]
+	}
+}
