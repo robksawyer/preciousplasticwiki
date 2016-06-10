@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.23",
+            "version": "v1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e"
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/6213d900e92647831f7a406d5c530ea1f3d4360e",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
                 "shasum": ""
             },
             "require": {
@@ -40,8 +40,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -56,12 +56,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -103,7 +105,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-01-27 12:54:22"
+            "time": "2016-04-13 19:46:30"
         },
         {
             "name": "composer/semver",
@@ -203,37 +205,37 @@
         },
         {
             "name": "data-values/common",
-            "version": "0.2.3",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataValues/Common.git",
-                "reference": "c9f4dfd8af6337eb097d722b27fa76fa58dd441a"
+                "reference": "5d9d4bf902427a2a798ca273480f7dad825c72b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataValues/Common/zipball/c9f4dfd8af6337eb097d722b27fa76fa58dd441a",
-                "reference": "c9f4dfd8af6337eb097d722b27fa76fa58dd441a",
+                "url": "https://api.github.com/repos/DataValues/Common/zipball/5d9d4bf902427a2a798ca273480f7dad825c72b5",
+                "reference": "5d9d4bf902427a2a798ca273480f7dad825c72b5",
                 "shasum": ""
             },
             "require": {
                 "data-values/data-values": "~1.0|~0.1",
-                "data-values/interfaces": "~0.1.4",
+                "data-values/interfaces": "~0.2.0|^0.1.5",
                 "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2.x-dev"
+                    "dev-master": "0.3.x-dev"
                 }
             },
             "autoload": {
                 "files": [
                     "Common.php"
                 ],
-                "psr-0": {
-                    "DataValues\\": "src",
-                    "ValueFormatters\\": "src",
-                    "ValueParsers\\": "src"
+                "psr-4": {
+                    "DataValues\\": "src/DataValues/",
+                    "ValueFormatters\\": "src/ValueFormatters/",
+                    "ValueParsers\\": "src/ValueParsers/"
                 },
                 "classmap": [
                     "tests/ValueParsers"
@@ -260,7 +262,7 @@
                 "valuevalidators",
                 "wikidata"
             ],
-            "time": "2014-10-09 18:21:19"
+            "time": "2015-08-14 10:15:07"
         },
         {
             "name": "data-values/data-values",
@@ -323,20 +325,20 @@
         },
         {
             "name": "data-values/geo",
-            "version": "1.1.5",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataValues/Geo.git",
-                "reference": "cf7628cae533c51e3f6bd67ec13245a245dec1da"
+                "reference": "31bc304c5b525f59fa7db047adc583d6b86e3ad9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataValues/Geo/zipball/cf7628cae533c51e3f6bd67ec13245a245dec1da",
-                "reference": "cf7628cae533c51e3f6bd67ec13245a245dec1da",
+                "url": "https://api.github.com/repos/DataValues/Geo/zipball/31bc304c5b525f59fa7db047adc583d6b86e3ad9",
+                "reference": "31bc304c5b525f59fa7db047adc583d6b86e3ad9",
                 "shasum": ""
             },
             "require": {
-                "data-values/common": "~0.2.3",
+                "data-values/common": "~0.3.0|~0.2.0",
                 "data-values/data-values": "~1.0|~0.1",
                 "data-values/interfaces": "~0.2.0|~0.1.5",
                 "php": ">=5.3.0"
@@ -382,20 +384,20 @@
                 "parsers",
                 "wikidata"
             ],
-            "time": "2015-12-28 23:58:15"
+            "time": "2016-05-27 15:02:09"
         },
         {
             "name": "data-values/interfaces",
-            "version": "0.1.5",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataValues/Interfaces.git",
-                "reference": "f563e6a55547046070e3d79b5662b620005558d8"
+                "reference": "2bed9fff899b3bf9c522497f9bd875f326eb1ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataValues/Interfaces/zipball/f563e6a55547046070e3d79b5662b620005558d8",
-                "reference": "f563e6a55547046070e3d79b5662b620005558d8",
+                "url": "https://api.github.com/repos/DataValues/Interfaces/zipball/2bed9fff899b3bf9c522497f9bd875f326eb1ef0",
+                "reference": "2bed9fff899b3bf9c522497f9bd875f326eb1ef0",
                 "shasum": ""
             },
             "require": {
@@ -406,10 +408,10 @@
                 "files": [
                     "Interfaces.php"
                 ],
-                "psr-0": {
-                    "ValueFormatters\\": "src",
-                    "ValueParsers\\": "src",
-                    "ValueValidators\\": "src"
+                "psr-4": {
+                    "ValueFormatters\\": "src/ValueFormatters/",
+                    "ValueParsers\\": "src/ValueParsers/",
+                    "ValueValidators\\": "src/ValueValidators/"
                 },
                 "classmap": [
                     "tests/ValueFormatters/ValueFormatterTestBase.php"
@@ -436,7 +438,7 @@
                 "valuevalidators",
                 "wikidata"
             ],
-            "time": "2015-02-14 02:37:02"
+            "time": "2016-01-13 18:44:31"
         },
         {
             "name": "data-values/validators",
@@ -501,20 +503,17 @@
         },
         {
             "name": "easybib/composer-newrelic",
-            "version": "0.2.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easybiblabs/composer-newrelic.git",
-                "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf"
+                "reference": "6cee8d1fe540903435fbdf950a7f6eb8a8e98095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easybiblabs/composer-newrelic/zipball/045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
-                "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
+                "url": "https://api.github.com/repos/easybiblabs/composer-newrelic/zipball/6cee8d1fe540903435fbdf950a7f6eb8a8e98095",
+                "reference": "6cee8d1fe540903435fbdf950a7f6eb8a8e98095",
                 "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "1.0.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -545,23 +544,23 @@
                 "plugin"
             ],
             "support": {
-                "source": "https://github.com/easybiblabs/composer-newrelic/tree/0.2.1",
+                "source": "https://github.com/easybiblabs/composer-newrelic/tree/0.2.0",
                 "issues": "https://github.com/easybiblabs/composer-newrelic/issues"
             },
-            "time": "2013-09-06 15:46:11"
+            "time": "2013-09-06 12:46:12"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.1.1",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c"
+                "reference": "d094e337976dff9d8e2424e8485872194e768662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c6851d6e48f63b69357cbfa55bca116448140e0c",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+                "reference": "d094e337976dff9d8e2424e8485872194e768662",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +576,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1-dev"
+                    "dev-master": "6.2-dev"
                 }
             },
             "autoload": {
@@ -610,20 +609,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-11-23 00:47:50"
+            "time": "2016-03-21 20:02:09"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.3",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea"
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/b1e1c0d55f8083c71eda2c28c12a228d708294ea",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
                 "shasum": ""
             },
             "require": {
@@ -661,20 +660,20 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-10-15 22:28:00"
+            "time": "2016-05-18 16:56:05"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.2",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb"
+                "reference": "31382fef2889136415751badebbd1cb022a4ed72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5d04bdd2881ac89abde1fb78cc234bce24327bb",
-                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/31382fef2889136415751badebbd1cb022a4ed72",
+                "reference": "31382fef2889136415751badebbd1cb022a4ed72",
                 "shasum": ""
             },
             "require": {
@@ -719,7 +718,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-01-23 01:23:02"
+            "time": "2016-04-13 19:56:01"
         },
         {
             "name": "liuggio/statsd-php-client",
@@ -819,28 +818,31 @@
         },
         {
             "name": "mediawiki/maps",
-            "version": "3.4.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeroenDeDauw/Maps.git",
-                "reference": "6842093fc2d3cd26a41c0ba6ecb62a00f2101696"
+                "reference": "fe80bade1878abe7c350fae0b395d3058cf36423"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeroenDeDauw/Maps/zipball/6842093fc2d3cd26a41c0ba6ecb62a00f2101696",
-                "reference": "6842093fc2d3cd26a41c0ba6ecb62a00f2101696",
+                "url": "https://api.github.com/repos/JeroenDeDauw/Maps/zipball/fe80bade1878abe7c350fae0b395d3058cf36423",
+                "reference": "fe80bade1878abe7c350fae0b395d3058cf36423",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0.1",
                 "data-values/geo": "~1.0",
                 "mediawiki/validator": "^2.0.2",
-                "php": ">=5.3.2"
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "data-values/common": "~0.3.1"
             },
             "type": "mediawiki-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4.x-dev"
+                    "dev-master": "3.6.x-dev"
                 }
             },
             "autoload": {
@@ -880,20 +882,20 @@
                 "mediawiki",
                 "osm"
             ],
-            "time": "2015-07-24 23:47:09"
+            "time": "2016-05-26 15:12:38"
         },
         {
             "name": "mediawiki/validator",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeroenDeDauw/Validator.git",
-                "reference": "57c6f20f8c0100865e4318b9e5277dd2c4331a0a"
+                "reference": "d016211021c2811ad74581c40f169d96928fac8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeroenDeDauw/Validator/zipball/57c6f20f8c0100865e4318b9e5277dd2c4331a0a",
-                "reference": "57c6f20f8c0100865e4318b9e5277dd2c4331a0a",
+                "url": "https://api.github.com/repos/JeroenDeDauw/Validator/zipball/d016211021c2811ad74581c40f169d96928fac8a",
+                "reference": "d016211021c2811ad74581c40f169d96928fac8a",
                 "shasum": ""
             },
             "require": {
@@ -938,7 +940,7 @@
                 "mediawiki",
                 "validator"
             ],
-            "time": "2014-06-25 21:40:08"
+            "time": "2016-04-04 00:44:24"
         },
         {
             "name": "oojs/oojs-ui",
@@ -1072,22 +1074,22 @@
         },
         {
             "name": "param-processor/param-processor",
-            "version": "1.2.2",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeroenDeDauw/ParamProcessor.git",
-                "reference": "d046926ec7e3ef33e29c0ca3e4af3a92363376aa"
+                "reference": "b5c2b5e02a4a79f6c1b802eb639243d0e9376928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeroenDeDauw/ParamProcessor/zipball/d046926ec7e3ef33e29c0ca3e4af3a92363376aa",
-                "reference": "d046926ec7e3ef33e29c0ca3e4af3a92363376aa",
+                "url": "https://api.github.com/repos/JeroenDeDauw/ParamProcessor/zipball/b5c2b5e02a4a79f6c1b802eb639243d0e9376928",
+                "reference": "b5c2b5e02a4a79f6c1b802eb639243d0e9376928",
                 "shasum": ""
             },
             "require": {
-                "data-values/common": "~0.2.2",
+                "data-values/common": "~0.3.0|~0.2.2",
                 "data-values/data-values": "~1.0|~0.1.1",
-                "data-values/interfaces": "~0.1.4",
+                "data-values/interfaces": "~0.2.0|~0.1.4",
                 "data-values/validators": "~0.1.1",
                 "php": ">=5.3.0"
             },
@@ -1130,7 +1132,7 @@
                 "mediawiki",
                 "validator"
             ],
-            "time": "2014-10-24 16:04:12"
+            "time": "2016-05-23 12:39:16"
         },
         {
             "name": "pear/console_getopt",
@@ -1181,20 +1183,21 @@
         },
         {
             "name": "pear/mail",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Mail.git",
-                "reference": "19c4c78e39027374c012f32e489bbd3c6c47fb5e"
+                "reference": "8a7305cb507b460e03e55e0ac84c67c8358c9b44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Mail/zipball/19c4c78e39027374c012f32e489bbd3c6c47fb5e",
-                "reference": "19c4c78e39027374c012f32e489bbd3c6c47fb5e",
+                "url": "https://api.github.com/repos/pear/Mail/zipball/8a7305cb507b460e03e55e0ac84c67c8358c9b44",
+                "reference": "8a7305cb507b460e03e55e0ac84c67c8358c9b44",
                 "shasum": ""
             },
             "require": {
-                "pear/pear-core-minimal": "*"
+                "pear/pear-core-minimal": "*",
+                "php": ">=5.2.1"
             },
             "require-dev": {
                 "pear/pear": "*"
@@ -1234,7 +1237,7 @@
             ],
             "description": "Class that provides multiple interfaces for sending emails.",
             "homepage": "http://pear.php.net/package/Mail",
-            "time": "2016-01-09 07:14:03"
+            "time": "2016-01-31 21:32:18"
         },
         {
             "name": "pear/mail_mime-decode",
@@ -1286,16 +1289,16 @@
         },
         {
             "name": "pear/net_smtp",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Net_SMTP.git",
-                "reference": "cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c"
+                "reference": "8e83dfc6a355edace240aa8f5f8bf6c61eafcc98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Net_SMTP/zipball/cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c",
-                "reference": "cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c",
+                "url": "https://api.github.com/repos/pear/Net_SMTP/zipball/8e83dfc6a355edace240aa8f5f8bf6c61eafcc98",
+                "reference": "8e83dfc6a355edace240aa8f5f8bf6c61eafcc98",
                 "shasum": ""
             },
             "require": {
@@ -1342,7 +1345,7 @@
                 "mail",
                 "smtp"
             ],
-            "time": "2015-09-07 17:04:16"
+            "time": "2016-05-30 00:31:43"
         },
         {
             "name": "pear/net_socket",
@@ -1857,16 +1860,16 @@
         },
         {
             "name": "wildbit/postmark-php",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wildbit/postmark-php.git",
-                "reference": "9e02256570d9e86f0061ba21e7213144b16a3063"
+                "reference": "9d8997e50f3051dbe31d684bf3c6f0230c129993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildbit/postmark-php/zipball/9e02256570d9e86f0061ba21e7213144b16a3063",
-                "reference": "9e02256570d9e86f0061ba21e7213144b16a3063",
+                "url": "https://api.github.com/repos/wildbit/postmark-php/zipball/9d8997e50f3051dbe31d684bf3c6f0230c129993",
+                "reference": "9d8997e50f3051dbe31d684bf3c6f0230c129993",
                 "shasum": ""
             },
             "require": {
@@ -1887,7 +1890,7 @@
                 "MIT"
             ],
             "description": "The officially supported client for Postmark (http://postmarkapp.com)",
-            "time": "2015-12-10 13:48:54"
+            "time": "2016-02-10 14:22:20"
         },
         {
             "name": "zordius/lightncandy",
@@ -2352,20 +2355,23 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4|~5"
             },
             "type": "library",
             "autoload": {
@@ -2389,7 +2395,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-21 08:01:12"
+            "time": "2016-05-12 18:03:57"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -2639,16 +2645,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.2",
+            "version": "v2.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8"
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/34c8a4b51e751e7ea869b8262f883d008a2b81b8",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/815fabf3f48c7d1df345a69d1ad1a88f59757b34",
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34",
                 "shasum": ""
             },
             "require": {
@@ -2684,7 +2690,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-13 10:28:07"
+            "time": "2016-06-06 11:11:27"
         },
         {
             "name": "wikimedia/avro",
