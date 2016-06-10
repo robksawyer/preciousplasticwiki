@@ -143,7 +143,7 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
-wfLoadExtension( 'YouTube' );
+#wfLoadExtension( 'YouTube' );
 
 
 # End of automatically generated settings.
@@ -241,4 +241,4 @@ $wgAddThispubid = getenv('ADD_THIS_KEY');
 require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
-require_once "$IP/extensions/YouTube/YouTube.php";
+#require_once("$IP/extensions/YouTube/YouTube.php");
