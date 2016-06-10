@@ -1,0 +1,30 @@
+# Repository management
+.svn
+
+# Editors
+*~
+*.swp
+.idea/
+/nbproject/private/
+
+# Wikimedia private/temporary stuff
+private
+wmf-config/ExtensionMessages-*.php
+php-*/
+wikiversions.php
+wikiversions-labs.php
+wmf-config/*-setup.php
+boardvote.gpg
+
+# Test runners
+/logs
+
+# Operating system stuff
+## Mac OS X
+.DS_Store
+
+# Other things
+node_modules/*
+data/*
+*.log
+vendor/

@@ -1,0 +1,12 @@
+{
+	"preset": "wikimedia",
+
+	"disallowImplicitTypeConversion": null,
+	"disallowNewlineBeforeBlockStatements": null,
+	"disallowSpacesInCallExpression": null,
+	"requireSpaceAfterLineComment": null,
+	"requireSpaceBeforeObjectValues": null,
+	"requireSpaceBeforeKeywords": null,
+	"requireSpacesInsideParentheses": null,
+	"validateIndentation": null
+}
