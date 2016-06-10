@@ -144,6 +144,7 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
+wfLoadExtension( 'UniversalLanguageSelector' );
 
 
 # End of automatically generated settings.
@@ -242,3 +243,5 @@ require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
 require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
+
+require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
