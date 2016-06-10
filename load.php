@@ -21,7 +21,7 @@
  * @author Roan Kattouw
  * @author Trevor Parscal
  */
-
+use Intouch\Newrelic\Newrelic;
 use MediaWiki\Logger\LoggerFactory;
 
 // Bail on old versions of PHP, or if composer has not been run yet to install
@@ -50,3 +50,5 @@ Profiler::instance()->setTemplated( true );
 
 $mediawiki = new MediaWiki();
 $mediawiki->doPostOutputShutdown( 'fast' );
+
+$newrelic = new Newrelic();
