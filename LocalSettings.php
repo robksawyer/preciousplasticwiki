@@ -143,6 +143,7 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
+wfLoadExtension( 'YouTube' );
 
 
 # End of automatically generated settings.
