@@ -144,7 +144,6 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
-wfLoadExtension( 'UniversalLanguageSelector' );
 
 
 # End of automatically generated settings.
