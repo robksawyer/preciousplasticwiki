@@ -147,6 +147,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'ContributionTracking' );
 wfLoadExtension( 'DonationInterface' );
+wfLoadExtension( 'PayPal' );
 
 
 # End of automatically generated settings.
@@ -256,7 +257,7 @@ require_once("$IP/extensions/DonationInterface/DonationInterface.php");
 $wgDonationInterfaceEnableAmazon = true;
 
 # https://www.mediawiki.org/wiki/Extension:PayPal
-require_once "$IP/extensions/PayPal/PayPal.php";
+require_once("$IP/extensions/PayPal/PayPal.php");
 
 # Semantic MediaWiki Requirements
 enableSemantics( getenv('SITE_URL') );
