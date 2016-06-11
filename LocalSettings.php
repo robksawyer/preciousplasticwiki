@@ -245,3 +245,6 @@ require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 
 require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
+
+# Semantic MediaWiki Requirements
+enableSemantics( getenv('SITE_URL') );

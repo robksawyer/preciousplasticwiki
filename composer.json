@@ -46,7 +46,8 @@
 		"wildbit/postmark-php": "^2.1",
 		"pear/Net_SMTP": "^1.7",
 		"mediawiki/maps": "*",
-		"intouch/newrelic": "^1.0"
+		"intouch/newrelic": "^1.0",
+		"mediawiki/semantic-media-wiki": "~2.1"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
