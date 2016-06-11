@@ -147,7 +147,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'ContributionTracking' );
 // wfLoadExtension( 'DonationInterface' );
-wfLoadExtension( 'PayPal' );
+// wfLoadExtension( 'PayPal' );
 
 
 # End of automatically generated settings.
@@ -254,9 +254,9 @@ require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##
-// require_once("$IP/extensions/DonationInterface/DonationInterface.php");
+require_once("$IP/extensions/DonationInterface/DonationInterface.php");
 
-// $wgDonationInterfaceEnableAmazon = true;
+$wgDonationInterfaceEnableAmazon = true;
 
 ##
 # https://www.mediawiki.org/wiki/Extension:PayPal
