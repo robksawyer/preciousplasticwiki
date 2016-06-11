@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"DRIHEM",
+			"Meno25",
+			"OsamaK",
+			"زكريا"
+		]
+	},
+	"contributiontracking-desc": "تتبع المساهمة لجامع تبرعات ويكيميديا",
+	"contributiontracking": "تتبع المساهمة",
+	"contrib-tracking-error": "خطأ",
+	"contrib-tracking-error-text": "نموذج تسليم غير صحيح",
+	"contrib-tracking-submitting": "تسليم إلى معالج الدفع...",
+	"contrib-tracking-continue": "إذا لم يتم توجيهها تلقائياً، انقر فوق الزر لإتمام تبرعك.",
+	"contrib-tracking-redirect": "سوف يتم توجيهك تلقائياً لإتمام تبرعك.",
+	"contrib-tracking-button": "استمرار",
+	"contrib-tracking-item-name-onetime": "التبرع مرة واحدة",
+	"contrib-tracking-item-name-recurring": "تبرع شهري متكرر"
+}

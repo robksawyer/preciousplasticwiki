@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stephenwanjau"
+		]
+	},
+	"contributiontracking-desc": "Ufuatiliaji wa mchango kwa ajili ya uchangishaji fedha kwa Wikimedia",
+	"contributiontracking": "Ufuatiliaji wa mchango",
+	"contrib-tracking-error": "Hitilafu",
+	"contrib-tracking-error-text": "Kuwasilisha kwa fomu ni batili",
+	"contrib-tracking-submitting": "Inawasilisha kwa prosesa ya malipo...",
+	"contrib-tracking-continue": "Kama hautaelekezwa mara moja kwa moja, bonyeza lkitufe ili kukamilisha mchango wako.",
+	"contrib-tracking-redirect": "Utaelekezwa mara moja kwa moja kukamilisha mchango wako.",
+	"contrib-tracking-button": "Endelea",
+	"contrib-tracking-item-name-onetime": "Mchango wa wakati mmoja",
+	"contrib-tracking-item-name-recurring": "Mchango wa mara kwa mara kila mwezi"
+}

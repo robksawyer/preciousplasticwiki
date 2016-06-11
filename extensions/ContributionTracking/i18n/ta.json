@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karthi.dr",
+			"TRYPPN",
+			"ElangoRamanujam"
+		]
+	},
+	"contrib-tracking-error": "தவறு",
+	"contrib-tracking-button": "தொடரவும்",
+	"contrib-tracking-item-name-onetime": "ஒருதடவையிலான நன்கொடை",
+	"apihelp-contributiontracking-param-email": "கொடையாளரின் மின்னஞ்சல்."
+}

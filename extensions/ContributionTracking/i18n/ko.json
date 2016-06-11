@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilovesabbath",
+			"Kwj2772",
+			"아라"
+		]
+	},
+	"contributiontracking-desc": "위키미디어 기금 모금을 위한 기부 추적",
+	"contributiontracking": "기부 추적",
+	"contrib-tracking-error": "오류",
+	"contrib-tracking-error-text": "부적절한 양식 제출",
+	"contrib-tracking-submitting": "결재 처리 요청 중...",
+	"contrib-tracking-continue": "자동으로 넘어가지 않는다면, 기부를 완료하기 위해서 버튼을 클릭하세요.",
+	"contrib-tracking-redirect": "자동으로 기부를 완료하기 위해 넘겨주기될 것입니다.",
+	"contrib-tracking-button": "계속",
+	"contrib-tracking-item-name-onetime": "한 번 기부",
+	"contrib-tracking-item-name-recurring": "매월 정기 기부",
+	"contrib-tracking-fundraiser-maintenance-header": "유시 보수를 위해 일시적으로 멈춤",
+	"contrib-tracking-fundraiser-maintenance-notice": "현재 유지 보수가 예정되어 있어 기부를 받아줄 수 없습니다. 잠시 후에 다시 시도하세요. 질문이 있다면 $1 (으)로 이메일을 보내세요."
+}

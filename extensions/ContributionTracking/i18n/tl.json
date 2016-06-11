@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw",
+			"Sky Harbor"
+		]
+	},
+	"contributiontracking-desc": "Pagsunod sa bakas (pagtugaygay) para sa pangangalap ng salaping panustos (pondo) ng Wikimedia",
+	"contributiontracking": "Pagtugaygay/pagsunod sa bakas ng ambag",
+	"contrib-tracking-error": "Kamalian",
+	"contrib-tracking-error-text": "Hindi tanggap na anyo/pormularyo ng pagpasa",
+	"contrib-tracking-submitting": "Ipinapasa/ipinapadala sa tagapagsagawa (tagaproseso) ng bayad...",
+	"contrib-tracking-continue": "Kapag hindi ka kusang naihatid sa ibang kapupuntahan, pindutin ang pindutan upang mabuo ang iyong abuloy.",
+	"contrib-tracking-redirect": "Kusa kang ihahatid sa ibang kapupuntahan upang mabuo ang donasyon mo.",
+	"contrib-tracking-button": "Magpatuloy",
+	"contrib-tracking-item-name-onetime": "Abuloy na pang-isang pagkakataon",
+	"contrib-tracking-item-name-recurring": "Umuulit na buwanang ambag"
+}

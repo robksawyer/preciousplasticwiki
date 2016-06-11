@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"contributiontracking-desc": "Jälgib Wikimedia korjanduse laekumisi.",
+	"contrib-tracking-error": "Viga",
+	"contrib-tracking-submitting": "Maksevahendaja juurde suunamine...",
+	"contrib-tracking-continue": "Kui sind ei suunata automaatselt, klõpsa nuppu, et annetus lõpule viia.",
+	"contrib-tracking-redirect": "Sind suunatakse automaatselt, et annetus lõpule viia.",
+	"contrib-tracking-button": "Jätka",
+	"contrib-tracking-item-name-onetime": "Ühekordne annetus",
+	"contrib-tracking-item-name-recurring": "Korduv igakuine annetus"
+}

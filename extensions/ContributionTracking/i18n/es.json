@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin",
+			"Crazymadlover",
+			"MetalBrasil",
+			"Remember the dot",
+			"Macofe",
+			"Fitoschido",
+			"Ryo567"
+		]
+	},
+	"contributiontracking-desc": "Contribución para el seguimiento del recaudador de fondos de Wikimedia",
+	"contributiontracking": "Seguimiento contribucional",
+	"contrib-tracking-error": "Error",
+	"contrib-tracking-error-text": "Envío de formulario inválido",
+	"contrib-tracking-submitting": "Entregando al procesador de pagos...",
+	"contrib-tracking-continue": "Si no es redirigido automáticamente, haga clic en el botón para completar su donación.",
+	"contrib-tracking-redirect": "Usted será redirigido automáticamente para completar su donación.",
+	"contrib-tracking-button": "Continuar",
+	"contrib-tracking-item-name-onetime": "Donación única",
+	"contrib-tracking-item-name-recurring": "Donación mensual recurrente",
+	"contrib-tracking-fundraiser-maintenance-header": "Parado temporalmente por mantenimiento",
+	"contrib-tracking-fundraiser-maintenance-notice": "Actualmente estamos realizando mantenimiento programado y somos incapaces de aceptar donaciones. Inténtalo de nuevo en otro momento.  Si tienes alguna pregunta, por favor, envíanos un correo electrónico a $1.",
+	"apihelp-contributiontracking-param-amount": "Monto de la transacción.",
+	"apihelp-contributiontracking-param-comment": "Cadena con un comentario.",
+	"apihelp-contributiontracking-param-country": "Código del país del usuario.",
+	"apihelp-contributiontracking-param-fname": "Nombre(s) del donante.",
+	"apihelp-contributiontracking-param-lname": "Apellido(s) del donante.",
+	"apihelp-contributiontracking-param-email": "Dirección de correo electrónico del donante.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Especificado si es una donación recurrente.",
+	"apihelp-contributiontracking-param-amountGiven": "Monto normalizado.",
+	"apihelp-contributiontracking-example-1": "Seguir una contribución"
+}

@@ -1,0 +1,73 @@
+{
+	"name": "ContributionTracking",
+	"author": "David Strauss",
+	"url": "https://www.mediawiki.org/wiki/Extension:ContributionTracking",
+	"descriptionmsg": "contributiontracking-desc",
+	"type": "specialpage",
+	"APIModules": {
+		"contributiontracking": "ApiContributionTracking"
+	},
+	"AutoloadClasses": {
+		"ContributionTracking": "ContributionTracking_body.php",
+		"ContributionTrackingHooks": "ContributionTracking.hooks.php",
+		"ContributionTrackingTester": "ContributionTracking_Tester.php",
+		"SpecialFundraiserMaintenance": "special/SpecialFundraiserMaintenance.php",
+		"ApiContributionTracking": "ApiContributionTracking.php",
+		"ContributionTrackingProcessor": "ContributionTracking.processor.php"
+	},
+	"AvailableRights": [
+		"ViewContributionTrackingTester"
+	],
+	"config": {
+		"ContributionTrackingFundraiserMaintenance": false,
+		"ContributionTrackingFundraiserMaintenanceUnsched": false,
+		"ContributionTrackingPayPalBusiness": "donations@wikimedia.org",
+		"ContributionTrackingPayPalIPN": "https://civicrm.wikimedia.org/fundcore_gateway/paypal",
+		"ContributionTrackingPayPalRecurringIPN": "https://civicrm.wikimedia.org/fundcore_gateway/paypal",
+		"ContributionTrackingRPPLength": "0",
+		"ContributionTrackingReturnToURLDefault": "http://wikimediafoundation.org/wiki/Thank_You"
+	},
+	"ExtensionFunctions": [
+		"ContributionTrackingHooks::extensionFunction"
+	],
+	"ExtensionMessagesFiles": {
+		"ContributionTrackingAlias": "ContributionTracking.alias.php"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"ViewContributionTrackingTester": true
+		}
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": [
+			"ContributionTrackingHooks::onLoadExtensionSchemaUpdates"
+		]
+	},
+	"MessagesDirs": {
+		"ContributionTracking": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"jquery.contributionTracking": {
+			"scripts": "jquery.contributionTracking.js"
+		},
+		"contributionTracking.fundraiserMaintenance": {
+			"styles": [
+				"skinOverride.css"
+			],
+			"scripts": [],
+			"position": "top"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ContributionTracking/modules"
+	},
+	"SpecialPages": {
+		"ContributionTracking": "ContributionTracking",
+		"ContributionTrackingTester": "ContributionTrackingTester",
+		"FundraiserMaintenance": "SpecialFundraiserMaintenance"
+	},
+	"manifest_version": 1
+}

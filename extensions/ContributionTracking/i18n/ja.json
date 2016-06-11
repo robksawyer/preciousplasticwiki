@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Mizusumashi",
+			"Ohgi",
+			"Shirayuki",
+			"Whym",
+			"青子守歌"
+		]
+	},
+	"contributiontracking-desc": "ウィキメディア資金調達者向け寄付追跡",
+	"contributiontracking": "寄付追跡",
+	"contrib-tracking-error": "エラー",
+	"contrib-tracking-error-text": "フォーム送信が無効です",
+	"contrib-tracking-submitting": "決済処理者に提出中...",
+	"contrib-tracking-continue": "自動的に転送されない場合、ボタンを押して寄付を完了させてください。",
+	"contrib-tracking-redirect": "あなたの寄付を完了させるため、自動的にリダイレクトします。",
+	"contrib-tracking-button": "続行",
+	"contrib-tracking-item-name-onetime": "1回だけ寄付",
+	"contrib-tracking-item-name-recurring": "月ごとに定期寄付",
+	"contrib-tracking-fundraiser-maintenance-header": "メンテナンスのため一時的に停止中",
+	"contrib-tracking-fundraiser-maintenance-notice": "現在、定期的なメンテナンス作業を行っているため寄付を受け付けることができません。ご質問があれば、$1 にメールをください。",
+	"apihelp-contributiontracking-param-amount": "取引金額です。",
+	"apihelp-contributiontracking-param-comment-option": "匿名フラグを反転したものです。",
+	"apihelp-contributiontracking-param-email-opt": "メールのオプトアウト チェックボックスを反転したものです。",
+	"apihelp-contributiontracking-param-language": "利用者の言語コードです。メッセージが適切に翻訳されます (翻訳できる場合)。この値は、利用者がゲートウェイで寄付を完了した際に表示される「ありがとうございます」ページの言語にも影響します。",
+	"apihelp-contributiontracking-param-country": "利用者の国コードです。",
+	"apihelp-contributiontracking-param-fname": "寄付者の名です。",
+	"apihelp-contributiontracking-param-lname": "寄付者の姓です。",
+	"apihelp-contributiontracking-param-email": "寄付者のメールです。"
+}

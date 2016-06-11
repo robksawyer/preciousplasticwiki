@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"contributiontracking-desc": "Survelyence de les contribucions por la levâ de fonds de Wikimedia.",
+	"contributiontracking": "Survelyence de les contribucions",
+	"contrib-tracking-error": "Èrror",
+	"contrib-tracking-error-text": "Somission du formulèro envalida",
+	"contrib-tracking-submitting": "Èxpèdicion u sistèmo de trètament des payements...",
+	"contrib-tracking-continue": "Se vos éte pas redirigiê ôtomaticament, clicâd lo boton por chavonar voutron don.",
+	"contrib-tracking-redirect": "Vos voléd étre redirigiê ôtomaticament por chavonar voutron don.",
+	"contrib-tracking-button": "Continuar",
+	"contrib-tracking-item-name-onetime": "Don solèt",
+	"contrib-tracking-item-name-recurring": "Don per mês rècurrent"
+}

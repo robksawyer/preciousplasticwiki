@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Matasg"
+		]
+	},
+	"contrib-tracking-error": "Klaida",
+	"contrib-tracking-error-text": "Neteisingas formos pateikimas",
+	"contrib-tracking-submitting": "Pateikiama mokėjimo procesoriui...",
+	"contrib-tracking-continue": "Jei nebūsite automatiškai nukreiptas, paspauskite mygtuką, kad galėtumėte užbaigti savo aukojimą PayPal.",
+	"contrib-tracking-redirect": "Jūs būsite automatiškai nukreipti į PayPal sistemą, kad užbaigtumėte aukojimo procesą.",
+	"contrib-tracking-button": "Tęsti",
+	"contrib-tracking-item-name-onetime": "Vienkartinės auka",
+	"contrib-tracking-item-name-recurring": "Kas mėnesinė auka",
+	"contrib-tracking-fundraiser-maintenance-header": "Laikinai neprieinamas dėl priežiūros"
+}

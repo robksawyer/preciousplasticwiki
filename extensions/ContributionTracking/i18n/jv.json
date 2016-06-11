@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180",
+			"Pras"
+		]
+	},
+	"contributiontracking-desc": "Panjejakan kontribusi kanggo pangumpul dana Wikimedia",
+	"contributiontracking": "Panjejakan kontribusi",
+	"contrib-tracking-error": "Kasalahan",
+	"contrib-tracking-error-text": "Pangajuan formulir ora sah",
+	"contrib-tracking-submitting": "Ngirim menyang prosèsor pambayaran...",
+	"contrib-tracking-continue": "Yèn Sampéyan ora otomatis dialihaké, klik tombol kuwi kanggo ngrampungaké sumbangan Sampéyan.",
+	"contrib-tracking-redirect": "Sampéyan bakal otomatis diarahaké kanggo ngrampungaké sumbangan Sampéyan.",
+	"contrib-tracking-button": "Terus",
+	"contrib-tracking-item-name-onetime": "Sumbangan sisan-gawé",
+	"contrib-tracking-item-name-recurring": "Sumbangan saben sasi ajeg"
+}

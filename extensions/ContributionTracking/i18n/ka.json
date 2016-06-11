@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010",
+			"Malafaya",
+			"გიორგიმელა",
+			"Otogi"
+		]
+	},
+	"contributiontracking-desc": "ვიკიმედიის ფონდის სასარგებლოდ შეწირულებების კონტროლი",
+	"contributiontracking": "შეწირულობების შეგროვების კონტროლი",
+	"contrib-tracking-error": "შეცდომა",
+	"contrib-tracking-error-text": "არასწორი ფორმის ნებართვა",
+	"contrib-tracking-submitting": "მიმდინარეობს გადახდების დამმუშავებლისდამი გაგზავნა...",
+	"contrib-tracking-continue": "თუ თქვენ არ იყავით ავტომატურად გადამისამართებული, დააჭირეთ ღილაკს რათა დაასრულოთ თქვენი შემოწირულობა.",
+	"contrib-tracking-button": "გაგრძელება",
+	"contrib-tracking-item-name-onetime": "ერთჯერადი შენატანი",
+	"contrib-tracking-item-name-recurring": "ყოველთვიური შენატანი",
+	"contrib-tracking-fundraiser-maintenance-header": "დროებით ქვემოთ დახმარებისთვის",
+	"apihelp-contributiontracking-param-amount": "ტრანზაქციის ჯამი",
+	"apihelp-contributiontracking-param-comment": "მიმდევრობა კომენტარებთან ერთად",
+	"apihelp-contributiontracking-param-comment-option": "ანონიმური დროშის ინვერსია",
+	"apihelp-contributiontracking-param-country": "მომხმარებლის ქვეყნის კოდი",
+	"apihelp-contributiontracking-param-fname": "დონორის პირველი სახელი",
+	"apihelp-contributiontracking-param-lname": "დონორის უკანასკნელი სახელი",
+	"apihelp-contributiontracking-param-email": "დონორის ელექტრონული ფოსტა",
+	"apihelp-contributiontracking-param-amountGiven": "ნორმალიზებული ჯამი",
+	"apihelp-contributiontracking-example-1": "წვლილის კვალი"
+}

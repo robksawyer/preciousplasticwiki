@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"contributiontracking-desc": "Слїдованя фінанчных приспівків почас кампанї фонду Вікімедія",
+	"contributiontracking": "Слїдованя приспевків",
+	"contrib-tracking-error": "Хыба",
+	"contrib-tracking-error-text": "Одосланый формуларь не быв правилно выповненый",
+	"contrib-tracking-submitting": "Платба ся одосылать про спрацованя ...",
+	"contrib-tracking-continue": "Як не будете автоматічно напрамленый(а), кликните на клапку, жебы сьте міг(ла) докінчіти свій приспевок за помочі службы PayPal.",
+	"contrib-tracking-redirect": "Про докібчіня приспевку будете автоматічно напрамлены на PayPal.",
+	"contrib-tracking-button": "Продовжовати",
+	"contrib-tracking-item-name-onetime": "Єдноразове пожертвованя",
+	"contrib-tracking-item-name-recurring": "Періодічне штомісячне пожертвованя"
+}

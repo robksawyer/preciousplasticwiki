@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"Finnrind",
+			"Nghtwlkr"
+		]
+	},
+	"contributiontracking-desc": "Bidragssporing for Wikimedias innsamling",
+	"contributiontracking": "Bidragssporing",
+	"contrib-tracking-error": "Feil",
+	"contrib-tracking-error-text": "Ugyldig skjema",
+	"contrib-tracking-submitting": "Sender til betalingshåndtering...",
+	"contrib-tracking-continue": "Om du ikke omdirigeres automatisk, klikk på knappen for å gjennomføre din donasjonen.",
+	"contrib-tracking-redirect": "Du vil automatisk bli omdirigert for å fullføre donasjonen din.",
+	"contrib-tracking-button": "Fortsett",
+	"contrib-tracking-item-name-onetime": "Engangsdonasjon",
+	"contrib-tracking-item-name-recurring": "Regelmessige månedlige donasjoner"
+}

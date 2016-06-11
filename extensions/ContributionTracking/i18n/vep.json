@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Игорь Бродский"
+		]
+	},
+	"contributiontracking-desc": "Rahoidenkeradusen WikiMediale kaclend",
+	"contributiontracking": "Lahjoičendan kaclend",
+	"contrib-tracking-error": "Petuz",
+	"contrib-tracking-error-text": "Forman vär alištuz",
+	"contrib-tracking-submitting": "Oigendamine maksuiden processorale...",
+	"contrib-tracking-continue": "Ku teid ei udesoigendanuded avtomatižešti, paindat kingiteshe, miše tehta lahjočend.",
+	"contrib-tracking-redirect": "Teid kaimdas avtomatižešti, miše tö voižit tehta tond",
+	"contrib-tracking-button": "Jatkta",
+	"contrib-tracking-item-name-onetime": "Kerdaline tond",
+	"contrib-tracking-item-name-recurring": "Kuine tond"
+}

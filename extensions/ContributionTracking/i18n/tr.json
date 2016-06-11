@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joseph",
+			"Suelnur"
+		]
+	},
+	"contributiontracking-desc": "Vikimedya fonsağlayıcı için katkı izlemesi",
+	"contributiontracking": "Katkı izlemesi",
+	"contrib-tracking-error": "Hata",
+	"contrib-tracking-error-text": "Geçersiz form teslimi",
+	"contrib-tracking-submitting": "Ödeme işlemcisine gönderiliyor...",
+	"contrib-tracking-continue": "Otomatik olarak yönlendirilmediyseniz, bağışınızı tamamlamak için düğmeye tıklayın.",
+	"contrib-tracking-redirect": "Bağışınızı tamamlamak üzere otomatik olarak yönlendirileceksiniz.",
+	"contrib-tracking-button": "Devam et"
+}

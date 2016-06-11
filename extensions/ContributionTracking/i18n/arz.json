@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ghaly",
+			"Meno25",
+			"Ramsis II"
+		]
+	},
+	"contributiontracking-desc": "تتبع المساهمة لجامع تبرعات ويكيميديا",
+	"contributiontracking": "تتبع المساهة",
+	"contrib-tracking-error": "غلط",
+	"contrib-tracking-error-text": "استمارة التقديم مش صحيحة",
+	"contrib-tracking-submitting": "تقديم لمعالج الدفع ...",
+	"contrib-tracking-continue": "لو ما اتحولتش اوتوماتيكى، دوس على الزرار علشان تكمل التبرع بتاعك على الباى بال",
+	"contrib-tracking-button": "استمر"
+}

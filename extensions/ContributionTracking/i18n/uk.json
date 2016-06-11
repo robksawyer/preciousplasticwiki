@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aleksandrit",
+			"Ата",
+			"Тест"
+		]
+	},
+	"contributiontracking-desc": "Відстеження збору пожертвувань на користь Вікімедіа",
+	"contributiontracking": "Відстеження збору пожертвувань",
+	"contrib-tracking-error": "Помилка",
+	"contrib-tracking-error-text": "Неправильна подача форми",
+	"contrib-tracking-submitting": "Відправка оброблювачеві платежів...",
+	"contrib-tracking-continue": "Якщо ви не були автоматично перенаправлені, натисніть на кнопку, щоб завершити вашу пожертву.",
+	"contrib-tracking-redirect": "Ви будете автоматично перенаправлені для завершення вашого пожертвування.",
+	"contrib-tracking-button": "Продовжити",
+	"contrib-tracking-item-name-onetime": "Одноразове пожертвування",
+	"contrib-tracking-item-name-recurring": "Періодичне щомісячне пожертвування",
+	"contrib-tracking-fundraiser-maintenance-header": "Тимчасово відключений для технічного обслуговування",
+	"contrib-tracking-fundraiser-maintenance-notice": "Ми зараз виконуємо заплановане обслуговування і не в змозі прийняти пожертвувань. Будь ласка, спробуйте ще раз трохи згодом. Якщо у Вас є якісь запитання, будь ласка, напишіть на $1 .",
+	"apihelp-contributiontracking-description": "Відслідкувати донорські внески за API.\n\nІснує це API, тож ми можемо вилучити проміжну сторінку, яка відслідковувала б пожертви до того, як донор переходить до обробника платежів.",
+	"apihelp-contributiontracking-param-amount": "Сума транзакції.",
+	"apihelp-contributiontracking-param-referrer": "Рядок, що ідентифікує відповідний елемент.",
+	"apihelp-contributiontracking-param-gateway": "Рядок, що ідентифікує конкретний елемент, який використовується для обробки цього платежу.",
+	"apihelp-contributiontracking-param-comment": "Рядок з коментарем.",
+	"apihelp-contributiontracking-param-comment-option": "Зворотний до анонімного прапорця.",
+	"apihelp-contributiontracking-param-payments_form": "Рядок, що ідентифікує форму на кластера платежів, з допомогою якого було зроблено пожертвування.",
+	"apihelp-contributiontracking-param-email-opt": "Зворотна до галочки відключення е-мейлів.",
+	"apihelp-contributiontracking-param-language": "Код мови користувача. Повідомлення будуть перекладені належним чином (де можливо). Це також визначатиме, яку сторінку подяки бачить користувач на виході після завершення пожертви.",
+	"apihelp-contributiontracking-param-country": "Код країни користувача.",
+	"apihelp-contributiontracking-param-contribution_tracking_id": "Наш ID для поточного внеску. Не ставиться для нових внесків.",
+	"apihelp-contributiontracking-param-returnto": "Рядок, що ідентифікує альтернативну сторінку подяки для відображення користувачеві по завершенню транзакції.",
+	"apihelp-contributiontracking-param-tshirt": "Чи йдеться про футболку.",
+	"apihelp-contributiontracking-param-size": "Рядок, що вказує бажаний розмір футболки вище (якщо про неї йдеться)",
+	"apihelp-contributiontracking-param-premium_language": "Код мови для футболки. Це не вплине на переклад повідомлень поза текстом на самій футболці.",
+	"apihelp-contributiontracking-param-currency_code": "Код валюти для поточної операції.",
+	"apihelp-contributiontracking-param-fname": "Ім'я донора.",
+	"apihelp-contributiontracking-param-lname": "Прізвище донора.",
+	"apihelp-contributiontracking-param-email": "Електронна пошта донора.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Зазначення, чи це постійне пожертвування.",
+	"apihelp-contributiontracking-param-amountGiven": "Нормалізована сума.",
+	"apihelp-contributiontracking-example-1": "Відслідкувати внесок"
+}

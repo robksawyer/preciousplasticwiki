@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334"
+		]
+	},
+	"contributiontracking-desc": "Sledenje prispevkov za zbiralca sredstev Wikimedie",
+	"contributiontracking": "Sledenje prispevkov",
+	"contrib-tracking-error": "Napaka",
+	"contrib-tracking-error-text": "Neveljavni oddan obrazec",
+	"contrib-tracking-submitting": "Pošiljanje predelovalcu plačil ...",
+	"contrib-tracking-continue": "Če niste samodejno preusmerjeni, kliknite gumb, da dokončate svoj prispevek.",
+	"contrib-tracking-redirect": "Samodejno boste preusmerjeni za dokončanje vašega prispevka.",
+	"contrib-tracking-button": "Nadaljuj",
+	"contrib-tracking-item-name-onetime": "Enkratni prispevek",
+	"contrib-tracking-item-name-recurring": "Ponavljajoči se mesečni prispevki",
+	"contrib-tracking-fundraiser-maintenance-header": "Trenutno ne deluje zaradi vzdrževalnih del",
+	"contrib-tracking-fundraiser-maintenance-notice": "Trenutno izvajamo načrtovana vzdrževalna dela in ne moremo sprejemati donacij.  Prosimo, kmalu poskusite znova.  Če imate kakršna koli vprašanja, nam pišite na $1."
+}
