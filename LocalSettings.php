@@ -146,7 +146,7 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'ContributionTracking' );
-wfLoadExtension( 'DonationInterface' );
+// wfLoadExtension( 'DonationInterface' );
 wfLoadExtension( 'PayPal' );
 
 
@@ -251,13 +251,19 @@ require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector
 
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
-# https://www.mediawiki.org/wiki/Extension:DonationInterface
-require_once("$IP/extensions/DonationInterface/DonationInterface.php");
+##
+# @url https://www.mediawiki.org/wiki/Extension:DonationInterface
+##
+// require_once("$IP/extensions/DonationInterface/DonationInterface.php");
 
-$wgDonationInterfaceEnableAmazon = true;
+// $wgDonationInterfaceEnableAmazon = true;
 
+##
 # https://www.mediawiki.org/wiki/Extension:PayPal
+##
 require_once("$IP/extensions/PayPal/PayPal.php");
 
+##
 # Semantic MediaWiki Requirements
+##
 enableSemantics( getenv('SITE_URL') );
