@@ -131,7 +131,6 @@ wfLoadSkin( 'Vector' );
 # Enabled Extensions. Most extensions are enabled by including the base extension file here
 # but check specific extension documentation for more details
 # The following extensions were automatically enabled:
-wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'ConfirmEdit' );
@@ -210,7 +209,7 @@ $wgLocalFileRepo = array(
 	'cloudFrontUrl' => $wgCloudFrontUrl
 );
 
-// require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
+require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
 // s3 filesystem repo - end
 
@@ -247,9 +246,9 @@ $wgAddThispubid = getenv('ADD_THIS_KEY');
 require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
-// require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
+require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 
-// require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
+require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
