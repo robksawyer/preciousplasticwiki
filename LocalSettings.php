@@ -99,8 +99,8 @@ $wgMainCacheType = CACHE_ACCEL;
 // $wgMessageCacheType = CACHE_MEMCACHED; # optional
 // $wgMemCachedServers = array( getenv('MEMCACHIER_SERVERS') );
 
-$wgSessionsInObjectCache = true; # optional
-$wgSessionCacheType = CACHE_MEMCACHED; # optional
+// $wgSessionsInObjectCache = true; # optional
+// $wgSessionCacheType = CACHE_MEMCACHED; # optional
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
