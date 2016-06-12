@@ -65,7 +65,15 @@ $wgDBport = "5432";
 $wgDBmwschema = "mediawiki";
 
 ## Shared memory settings
-$wgMainCacheType = CACHE_ACCEL;
+// $wgMainCacheType = CACHE_ACCEL;
+
+$wgMainCacheType = CACHE_MEMCACHED;
+$wgParserCacheType = CACHE_MEMCACHED; # optional
+$wgMessageCacheType = CACHE_MEMCACHED; # optional
+$wgMemCachedServers = array( getenv('MEMCACHIER_SERVERS') );
+
+$wgSessionsInObjectCache = true; # optional
+$wgSessionCacheType = CACHE_MEMCACHED; # optional
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
@@ -90,7 +98,7 @@ $wgShellLocale = "en_US.utf8";
 ## Set $wgCacheDirectory to a writable directory on the web server
 ## to make your wiki go slightly faster. The directory should not
 ## be publically accessible from the web.
-#$wgCacheDirectory = "$IP/cache";
+// $wgCacheDirectory = "$IP/cache";
 
 # Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = "en";
@@ -251,6 +259,8 @@ require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
+
+require_once "$IP/extensions/Memcached/Memcached.php";
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface

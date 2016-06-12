@@ -47,7 +47,9 @@
 		"pear/Net_SMTP": "^1.7",
 		"mediawiki/maps": "*",
 		"intouch/newrelic": "^1.0",
-		"mediawiki/semantic-media-wiki": "~2.1"
+		"mediawiki/semantic-media-wiki": "~2.1",
+		"ext-memcached": "^2.2",
+		"memcachier/php-memcache-sasl": "^1.0"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
