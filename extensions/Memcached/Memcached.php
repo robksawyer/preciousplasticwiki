@@ -17,7 +17,7 @@ if ( !defined( 'MEDIAWIKI' ) ) die();
 define( 'Memcached_VERSION', '1.0.1' );
 
 $wgExtensionCredits['specialpage'][] = array(
-        'path'           => __FILE__,
+  'path'           => __FILE__,
 	'name'           => 'Memcached',
 	'author'         => 'UA2004',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Memcached',
