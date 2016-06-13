@@ -246,6 +246,8 @@ $wgLocalFileRepo = array(
 
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
+$wgAllowImageMoving = true;
+
 // s3 filesystem repo - end
 
 //HTMLets
