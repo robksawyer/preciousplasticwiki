@@ -253,7 +253,7 @@ require_once("$IP/extensions/HTMLets/HTMLets.php");
 $wgHTMLetsDirectory = "$IP/htmlets";
 
 //FontAwesome
-require_once("$IP/extensions/FontAwesome/FontAwesome.php");
+// require_once("$IP/extensions/FontAwesome/FontAwesome.php");
 
 //Upload Wizard
 //https://www.mediawiki.org/wiki/Extension:UploadWizard
