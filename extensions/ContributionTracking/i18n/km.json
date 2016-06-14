@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Thearith",
+			"គីមស៊្រុន"
+		]
+	},
+	"contrib-tracking-error": "កំហុស",
+	"contrib-tracking-continue": "ប្រសិនបើអ្នកមិនត្រូវបានបញ្ជូនបន្តដោយស្វ័យប្រវត្តិទេ សូចចុចប៊ូតុងដើម្បីសំរេចការបរិច្ចាគរបស់អ្នក។",
+	"contrib-tracking-redirect": "អ្នកនឹងត្រូវបញ្ជូនបន្តដោយស្វ័យប្រវត្តិដើម្បីសំរេចការបរិច្ចាគរបស់អ្នក។",
+	"contrib-tracking-button": "បន្ត",
+	"contrib-tracking-item-name-onetime": "ការបរិច្ចាគសំរាប់តែមួយលើក",
+	"contrib-tracking-item-name-recurring": "ការបរិច្ចាគប្រចាំខែ"
+}

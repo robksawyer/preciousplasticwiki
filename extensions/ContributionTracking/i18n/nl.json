@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie",
+			"Siebrand",
+			"Esketti"
+		]
+	},
+	"contributiontracking-desc": "Volgen van donaties voor de fondswerving van Wikimedia",
+	"contributiontracking": "Donaties volgen",
+	"contrib-tracking-error": "Fout",
+	"contrib-tracking-error-text": "Ongeldige formulierinvoer",
+	"contrib-tracking-submitting": "Bezig met het uitvoeren van de betaling...",
+	"contrib-tracking-continue": "Als u niet automatisch wordt doorgestuurd, klik dan op de knop om uw donatie te voltooien.",
+	"contrib-tracking-redirect": "U wordt automatisch doorgeleid om uw donatie te voltooien.",
+	"contrib-tracking-button": "Doorgaan",
+	"contrib-tracking-item-name-onetime": "Eenmalige donatie",
+	"contrib-tracking-item-name-recurring": "Terugkerende maandelijkse donatie",
+	"contrib-tracking-fundraiser-maintenance-header": "Tijdelijk niet beschikbaar wegens onderhoudswerkzaamheden",
+	"contrib-tracking-fundraiser-maintenance-notice": "Op het moment wordt onderhoud uitgevoerd en kunnen we helaas geen donaties verwerken. Probeer het snel opnieuw. Stuur een e-mail naar $1 als u vragen hebt.",
+	"apihelp-contributiontracking-description": "Track donaties via API.\n!\nDeze API bestaat, zodat we in staat zijn om te elimineren van de tussenliggende pagina die anders zou worden gebruikt voor het bijhouden van bijdragen voor het verzenden van de donor uit naar de payment processor.",
+	"apihelp-contributiontracking-param-amount": "Transactiebedrag.",
+	"apihelp-contributiontracking-param-referrer": "String identificatie van de entiteit te verwijzen.",
+	"apihelp-contributiontracking-param-gateway": "String het identificeren van de specifieke entiteit gebruikt voor de verwerking van deze betaling.",
+	"apihelp-contributiontracking-param-comment": "Tekst met opmerking.",
+	"apihelp-contributiontracking-param-comment-option": "De Inverse van de anonieme vlag.",
+	"apihelp-contributiontracking-param-payments_form": "String identificatie van het formulier op de betalingen cluster waardoor de donatie was.",
+	"apihelp-contributiontracking-param-email-opt": "De Inverse van de e-mail opt-out vakje.",
+	"apihelp-contributiontracking-param-language": "Gebruikers-taal code. Boodschappen zullen worden vertaald correct (waar mogelijk). Dit zal ook bepalen wat \"Dank U\" pagina die de gebruiker ziet, bij de voltooiing van een donatie aan de poort.",
+	"apihelp-contributiontracking-param-country": "Landcode van de gebruiker.",
+	"apihelp-contributiontracking-param-contribution_tracking_id": "Onze-ID voor de huidige bijdrage. Niet meegeleverd voor nieuwe bijdragen.",
+	"apihelp-contributiontracking-param-returnto": "String identificeren van een alternatieve \"Dank U\" pagina om de gebruiker op de voltooiing van hun transactie.",
+	"apihelp-contributiontracking-param-tshirt": "Of er een T-shirt in het spel is.",
+	"apihelp-contributiontracking-param-size": "Tekst die de gewenste maat van het bovenstaande T-shirt bevat (als van toepassing)",
+	"apihelp-contributiontracking-param-premium_language": "Taal code voor het shirt. Dit zal geen effect hebben op bericht vertaling buiten de fysieke omvang van het shirt.",
+	"apihelp-contributiontracking-param-currency_code": "Valutacode voor de huidige transactie.",
+	"apihelp-contributiontracking-param-fname": "Voornaam van de donateur.",
+	"apihelp-contributiontracking-param-lname": "Achternaam van de donateur.",
+	"apihelp-contributiontracking-param-email": "E-mailadres van de donateur.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Gebruikt als die een terugkerende donatie is.",
+	"apihelp-contributiontracking-param-amountGiven": "Genormaliseerd bedrag.",
+	"apihelp-contributiontracking-example-1": "Track een bijdrage"
+}

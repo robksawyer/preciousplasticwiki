@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ansumang"
+		]
+	},
+	"contributiontracking": "अबदान ट्रैकिंग",
+	"contrib-tracking-error": "त्रुटि",
+	"contrib-tracking-error-text": "अमान्य फॉर्म सबमिशन",
+	"contrib-tracking-button": "जारी रखें",
+	"contrib-tracking-item-name-onetime": "एक समय दान",
+	"contrib-tracking-item-name-recurring": "आवर्ती मासिक दान"
+}

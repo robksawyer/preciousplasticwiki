@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"contributiontracking-desc": "Siguimientu de les collaboraciones cola recaudación de fondos de Wikimedia",
+	"contributiontracking": "Siguimientu de les collaboraciones",
+	"contrib-tracking-error": "Error",
+	"contrib-tracking-error-text": "Unviu de formulariu inválidu",
+	"contrib-tracking-submitting": "Unviando al procesador de pagos...",
+	"contrib-tracking-continue": "Si nun te redirixe de mou automáticu, calca nel botón pa completar la to donación.",
+	"contrib-tracking-redirect": "Te redirixirá de mou automáticu pa completar la to donación.",
+	"contrib-tracking-button": "Siguir",
+	"contrib-tracking-item-name-onetime": "Donación única",
+	"contrib-tracking-item-name-recurring": "Donación mensual repetida",
+	"contrib-tracking-fundraiser-maintenance-header": "Zarráu temporalmente por mantenimientu",
+	"contrib-tracking-fundraiser-maintenance-notice": "Nesti momentu tamos faciendo un mantenimientu programáu y nun somos a aceutar donativos. Por favor, vuelvi a intentalo ceo. Si tienes dalguna entruga, manda un corréu a $1.",
+	"apihelp-contributiontracking-description": "Siguir les contribuciones de los donantes pela API.\n\nEsta API esiste pa que podamos desaniciar la páxina intercalada que s'usaría pa siguir les contribuciones antes d'unviar al donante al procesamientu de pagos.",
+	"apihelp-contributiontracking-param-amount": "Cantidá de la operación.",
+	"apihelp-contributiontracking-param-referrer": "Cadena de testu qu'identifica la entidá de referencia.",
+	"apihelp-contributiontracking-param-gateway": "Cadena de testu qu'identifica la entidá específica usada pa procesar esti pagu.",
+	"apihelp-contributiontracking-param-comment": "Cadena de testu con un comentariu.",
+	"apihelp-contributiontracking-param-comment-option": "Inverso de la marca d'anónimu.",
+	"apihelp-contributiontracking-param-payments_form": "Cadena de testu qu'identifica el formulariu del cluster de pagos al traviés del que se fexo la donación.",
+	"apihelp-contributiontracking-param-email-opt": "Inverso de la caxella d'opción de torga de corréu electrónicu.",
+	"apihelp-contributiontracking-param-language": "Códigu de la llingua del usuariu. Los mensaxes traduciránse apropiadamente (cuando seya posible). Esto tamién determinará que páxina \"Agradecimientu\" verá l'usuariu en rematando la donación na pasera.",
+	"apihelp-contributiontracking-param-country": "Códigu del país del usuariu.",
+	"apihelp-contributiontracking-param-contribution_tracking_id": "El nuesu identificador pa la contribución actual. Nun se da pa les contribuciones nueves.",
+	"apihelp-contributiontracking-param-returnto": "Cadena de testu qu'identifica una páxina \"Agradecimientu\" alternativa p'amosar al usuariu en rematando la operación.",
+	"apihelp-contributiontracking-param-tshirt": "Si s'incluye una camiseta.",
+	"apihelp-contributiontracking-param-size": "Cadena de testu qu'indica'l tamañu solicitáu de la camiseta d'arriba (si la hai)",
+	"apihelp-contributiontracking-param-premium_language": "Códigu de lingua pa la camiseta. Esto nun tendrá efeutu na traducción del mensaxe fuera del contestu físicu de la camiseta.",
+	"apihelp-contributiontracking-param-currency_code": "Códigu de la moneda de la operación actual.",
+	"apihelp-contributiontracking-param-fname": "Nome(s) del donante.",
+	"apihelp-contributiontracking-param-lname": "Apellíos del donante.",
+	"apihelp-contributiontracking-param-email": "Dirección de corréu electrónicu del donante.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Especificáu si ye una donación repetida.",
+	"apihelp-contributiontracking-param-amountGiven": "Cantidá normalizada.",
+	"apihelp-contributiontracking-example-1": "Siguir una contribución"
+}

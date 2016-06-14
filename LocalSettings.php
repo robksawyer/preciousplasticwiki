@@ -296,8 +296,6 @@ require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 
 require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
-require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
-
 require_once("$IP/extensions/Memcached/Memcached.php");
 
 $wgPdfProcessor = '/app/bin/gs';

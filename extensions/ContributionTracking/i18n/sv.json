@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ainali",
+			"Boivie",
+			"Tobulos1",
+			"WikiPhoenix",
+			"Josve05a",
+			"Jopparn"
+		]
+	},
+	"contributiontracking-desc": "Bidragsspårning för Wikimedia-insamlingen",
+	"contributiontracking": "Bidragsspårning",
+	"contrib-tracking-error": "Fel",
+	"contrib-tracking-error-text": "Ogiltigt skickande av formulär",
+	"contrib-tracking-submitting": "Skickar till betalningshanterare...",
+	"contrib-tracking-continue": "Om du omdirigeras automatiskt, klicka på knappen för att slutföra din donation.",
+	"contrib-tracking-redirect": "Du kommer att omdirigeras automatiskt för att slutföra din donation.",
+	"contrib-tracking-button": "Fortsätt",
+	"contrib-tracking-item-name-onetime": "Engångs-donation",
+	"contrib-tracking-item-name-recurring": "Återkommande månatlig donation",
+	"contrib-tracking-fundraiser-maintenance-header": "Tillfälligt nere för underhåll",
+	"contrib-tracking-fundraiser-maintenance-notice": "Vi utför planerat underhåll och inte kan ta emot donationer.  Försök igen snart.  Om du har några frågor, vänligen maila $1.",
+	"apihelp-contributiontracking-param-amount": "Transaktionsbelopp.",
+	"apihelp-contributiontracking-param-comment": "Sträng med en kommentar.",
+	"apihelp-contributiontracking-param-country": "Användarens landskod.",
+	"apihelp-contributiontracking-param-tshirt": "Om det är en t-shirt inblandad eller inte.",
+	"apihelp-contributiontracking-param-premium_language": "Språkkod för tröjan. Detta kommer inte att ha någon effekt på översättningen av meddelandet utanför tröjans fysiska omfattningen.",
+	"apihelp-contributiontracking-param-currency_code": "Valutakoden för den aktuella transaktionen.",
+	"apihelp-contributiontracking-param-fname": "Givarens förnamn.",
+	"apihelp-contributiontracking-param-lname": "Givarens efternamn.",
+	"apihelp-contributiontracking-param-email": "Givarens e-post.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Ange om detta är en återkommande donation.",
+	"apihelp-contributiontracking-example-1": "Spåra ett bidrag"
+}

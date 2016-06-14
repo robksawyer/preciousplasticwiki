@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli"
+		]
+	},
+	"contributiontracking-desc": "Moniteraġġ tad-donazzjonijiet għall-kampanja ta' ġbir ta' fondi tal-Wikimedia",
+	"contributiontracking": "Moniteraġġ tad-donazzjonijiet",
+	"contrib-tracking-error": "Żball",
+	"contrib-tracking-error-text": "Żball fis-sottomissjoni tal-formola",
+	"contrib-tracking-submitting": "Qiegħed jintbagħat għall-proċessur tal-ħlas...",
+	"contrib-tracking-continue": "Jekk mintix awtomatikament rindirizzat, agħfas il-buttuna sabiex tkompli d-donazzjoni.",
+	"contrib-tracking-redirect": "Se tiġi awtomatikament rindirizzat sabiex tkompli d-donazzjoni tiegħek.",
+	"contrib-tracking-button": "Kompli",
+	"contrib-tracking-item-name-onetime": "Donazzjoni unika",
+	"contrib-tracking-item-name-recurring": "Donazzjoni rikorrenti għal kull xahar"
+}

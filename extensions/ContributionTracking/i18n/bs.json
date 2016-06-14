@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"contributiontracking-desc": "Praćenje doprinosa za Wikimedia donacije",
+	"contributiontracking": "Praćenje doprinosa",
+	"contrib-tracking-error": "Greška",
+	"contrib-tracking-error-text": "Slanje nevaljanog obrasca",
+	"contrib-tracking-submitting": "Šaljem za proces plaćanja...",
+	"contrib-tracking-continue": "Ako niste automatski preusmjereni, kliknite na dugme da završite Vašu donaciju putem PayPala.",
+	"contrib-tracking-redirect": "Bit ćete automatski preusmjereni na PayPal da dovršite vašu donaciju.",
+	"contrib-tracking-button": "nastavi",
+	"contrib-tracking-item-name-onetime": "Jednokratna donacija",
+	"contrib-tracking-item-name-recurring": "Mjesečna ponavljajuća donacija"
+}

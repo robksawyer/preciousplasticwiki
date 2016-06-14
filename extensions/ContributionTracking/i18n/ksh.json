@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"contributiontracking-desc": "Schpände verfollje för de Wikkimehdija Schtefftong iere Kampanje för Jäld enzesammelle",
+	"contributiontracking": "Schpände verfollje",
+	"contrib-tracking-error": "Fähler",
+	"contrib-tracking-error-text": "Onjöltijje Dahte övverdraare för dat Fommolaa",
+	"contrib-tracking-submitting": "Övverjäve aan dä Dehnsleijster för et Bezahle&nbsp;…",
+	"contrib-tracking-continue": "Wann De nit automattesch ömjelengk wehs, donn op dä Knopp klecke, öm Ding Schpänd fähdesch ze maache.",
+	"contrib-tracking-redirect": "Do küß automattesch pä Ömleidong wigger, öm Ding Schpänd fähdesch ze maache.",
+	"contrib-tracking-button": "Wigger",
+	"contrib-tracking-item-name-onetime": "Eimohl_Schpänd",
+	"contrib-tracking-item-name-recurring": "Mohnatlesche_Schpänd",
+	"contrib-tracking-fundraiser-maintenance-header": "Jraad em Momang erongerjefahre för de Wahdong",
+	"contrib-tracking-fundraiser-maintenance-notice": "Mer sin jrahd en jeplante Waadong am Maache, un künne dröm kein Schpände aannämme. Bes esu johd un versöhg et bald wider. Schegg en <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„de eläktrohnesche Poß“\">e-mail</i>-Brehv aan di Addräß <code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">$1</code> wann De Frohre häs.",
+	"apihelp-contributiontracking-param-amount": "Dä Bedraach zom Övverdrahre.",
+	"apihelp-contributiontracking-param-comment-option": "Et Jähjedeil vum Kännzeijsche för ene Nahmelohse.",
+	"apihelp-contributiontracking-param-email-opt": "Dat Jähjedeil vun däm Käßje zom aankruzze för wam_mer kein <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„de eläktrohnesche Poß“\">e-mail</i> krijje well.",
+	"apihelp-contributiontracking-param-language": "Et Köözel för de Schprohch un däm Metmaacher. Täxte un Nohreeschte wähde övversaz, woh müjjelesch. Doh met weed och beschtemmp, op wat för en Danksahronssigg dä Metmaacher jescheck weed, wann di Schpänd fähdesch dorsch de Schnetschtäll jejange es.",
+	"apihelp-contributiontracking-param-country": "Et Köözel för et Land vun däm Metmaacher.",
+	"apihelp-contributiontracking-param-contribution_tracking_id": "Ons Kännong för dä aktoälle Beijdraach.\nNit aanjejovve för neu Beijdrähsch.",
+	"apihelp-contributiontracking-param-returnto": "E Täxschtök, wadd_en anndere Danksahronssigg för heh dä Metmaacher beschtemmp, woh dä hen jescheck weed, wann däm sing Schpänd fähdesch dorsch de Schnetschtäll jejange es.",
+	"apihelp-contributiontracking-param-tshirt": "Ov doh e Tih_Schöhd beij es.",
+	"apihelp-contributiontracking-param-size": "Ene Täx, dä de jwönschte Jrühße vun däm Tih_Schöhd vun bovve, wann et derbei es.",
+	"apihelp-contributiontracking-param-premium_language": "Et Köözel för de Schprohch vun däm Tih_Schöhd. Dä hät nix ze donn met de Övversäzonge vun Taxte udder Nohreeschte ußerhallv vum Bedröke un Maache vun däm Tih_Schöhd.",
+	"apihelp-contributiontracking-param-currency_code": "Et Köözel för de Zoot Jäld för heh di Övverdrahrong.",
+	"apihelp-contributiontracking-param-fname": "Der Jävver singe Vörnahme.",
+	"apihelp-contributiontracking-param-lname": "Der Jävver singe Nohnahme.",
+	"apihelp-contributiontracking-param-email": "Der Jävver sing Adräß för de <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„de eläktrohnesche Poß“\">e-mail</i>",
+	"apihelp-contributiontracking-param-recurring_paypal": "Aanjejovve, wann dadd en rejemähße Schpänd es.",
+	"apihelp-contributiontracking-param-amountGiven": "Dä Bedaach mommalesehrt.",
+	"apihelp-contributiontracking-example-1": "Donn ene Beidrahch verfollje"
+}

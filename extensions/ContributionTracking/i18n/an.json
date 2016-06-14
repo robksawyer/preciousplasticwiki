@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Juanpabl"
+		]
+	},
+	"contributiontracking-desc": "Seguimiento de contrebucions d'a replegad de fondos de Wikimedia",
+	"contributiontracking": "Seguimiento de contrebucions",
+	"contrib-tracking-error": "Error",
+	"contrib-tracking-error-text": "Error en o formulario",
+	"contrib-tracking-submitting": "Ninviando ta o procesador de pagos...",
+	"contrib-tracking-continue": "Si ye endrezato automaticament, faiga click en o botón ta rematar a suya donación en PayPal.",
+	"contrib-tracking-button": "Continar"
+}

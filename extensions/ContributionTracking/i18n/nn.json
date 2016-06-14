@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Finnrind",
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"contributiontracking-desc": "Bidragssporing for innsamlinga til Wikimedia",
+	"contributiontracking": "Bidragssporing",
+	"contrib-tracking-error": "Feil",
+	"contrib-tracking-error-text": "Ugyldig skjema",
+	"contrib-tracking-submitting": "Sender til betalingshandtering...",
+	"contrib-tracking-continue": "Vert du ikkje omdirigert automatisk, klikk på knappen for å gjennomføra donasjonen.",
+	"contrib-tracking-button": "Hald fram"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek"
+		]
+	},
+	"contrib-tracking-error": "Қате",
+	"contrib-tracking-button": "Жалғастыру",
+	"apihelp-contributiontracking-param-fname": "Донордың алғашқы аты",
+	"apihelp-contributiontracking-param-lname": "Донордың соңғы аты",
+	"apihelp-contributiontracking-param-email": "Донордың э-пошта мекенжайы."
+}

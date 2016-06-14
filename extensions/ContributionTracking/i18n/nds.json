@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Slomox"
+		]
+	},
+	"contributiontracking-desc": "Spennen verfolgen för de Wikimedia-Spennenkampagne",
+	"contributiontracking": "Spennen folgen",
+	"contrib-tracking-error": "Fehler",
+	"contrib-tracking-error-text": "Ungüllig Formularöverdragung",
+	"contrib-tracking-submitting": "An’t Överdragen an Betahl-Provider ...",
+	"contrib-tracking-continue": "Wenn du nich automaatsch wiederleidt warrst, denn klick op „Wieder“, dat du diene Spenn över PayPal afsluten kannst.",
+	"contrib-tracking-button": "Wiedermaken"
+}

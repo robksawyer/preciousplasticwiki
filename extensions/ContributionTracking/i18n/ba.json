@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele"
+		]
+	},
+	"contributiontracking-desc": "Викимедиа файҙаһына иғәнә йыйыуҙы күҙәтеү",
+	"contributiontracking": "Иғәнә йыйыуҙы күҙәтеү",
+	"contrib-tracking-error": "Хата",
+	"contrib-tracking-error-text": "Форманы ебәреү хатаһы",
+	"contrib-tracking-submitting": "Түләүҙәрҙе эшкәртеү ҡоралына ебәреү...",
+	"contrib-tracking-continue": "Әгәр һеҙ автоматик рәүештә йүнәлтелгән булмаһағыҙ, PayPal сайтында иғәнә биреүҙе тамамлау өсөн, төймәгә баҫығыҙ.",
+	"contrib-tracking-redirect": "Һеҙ иғәнә биреүҙе тамамлау өсөн автоматик рәүештә PayPal  сайтына йүнәлтеләсәкһегеҙ.",
+	"contrib-tracking-button": "Дауам итергә",
+	"contrib-tracking-item-name-onetime": "Бер тапҡыр булған иғәнә",
+	"contrib-tracking-item-name-recurring": "Ай һайын ҡабатланған иғәнә"
+}

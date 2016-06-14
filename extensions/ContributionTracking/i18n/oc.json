@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"contributiontracking-desc": "Seguit de las contribucions per la levada de fonses de Wikimedia",
+	"contributiontracking": "Seguit de las contribucions",
+	"contrib-tracking-error": "Error",
+	"contrib-tracking-error-text": "Error dins lo formulari",
+	"contrib-tracking-submitting": "Mandadís al sistèma de pagament...",
+	"contrib-tracking-continue": "Se sètz pas redirigit automaticament, clicatz aqueste boton per completar vòstre don.",
+	"contrib-tracking-button": "Contunhar",
+	"contrib-tracking-item-name-onetime": "Don unic",
+	"contrib-tracking-item-name-recurring": "Don mesadièr recurrent"
+}

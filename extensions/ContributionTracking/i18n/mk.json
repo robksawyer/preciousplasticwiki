@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"Brest"
+		]
+	},
+	"contributiontracking-desc": "Следење на дарувани прилози во иницијативата за собирање на средства на Викимедија",
+	"contributiontracking": "Следење на дарувања",
+	"contrib-tracking-error": "Грешка",
+	"contrib-tracking-error-text": "Неважечко поднесување на образецот",
+	"contrib-tracking-submitting": "Поднесувам на обработувачот на плаќања...",
+	"contrib-tracking-continue": "Ако се случи да не бидете пренасочени автоматски, стиснете на копчето за да го довршите дарувањето.",
+	"contrib-tracking-redirect": "Системот автоматски ќе ве префрли за да го довршите дарувањето.",
+	"contrib-tracking-button": "Продолжи",
+	"contrib-tracking-item-name-onetime": "Еднократен прилог",
+	"contrib-tracking-item-name-recurring": "Месечен прилог",
+	"contrib-tracking-fundraiser-maintenance-header": "Привремено недостапно поради одржување",
+	"contrib-tracking-fundraiser-maintenance-notice": "Во моментов вршиме планирано одржување и не можеме да прифаќаме уплати. Вратете се малку подоцна. Ако имате некакви прашања, обратете се на $1.",
+	"apihelp-contributiontracking-description": "Следење на придонесите на дарителите преку извршник.\n\nОвој извршник постои за да можеме да можеме да ја елиминираме меѓупросторната страница што инаку би се користела за следење на придонеси пред дарителот да биде предаден на платежниот обработувач.",
+	"apihelp-contributiontracking-param-amount": "Износ на уплатата.",
+	"apihelp-contributiontracking-param-referrer": "Низа што го означува упатувачот.",
+	"apihelp-contributiontracking-param-gateway": "Низа што го означува оној што ја обработува уплатата.",
+	"apihelp-contributiontracking-param-comment": "Низа со коментар.",
+	"apihelp-contributiontracking-param-comment-option": "Обратник на ознаката за анонимен.",
+	"apihelp-contributiontracking-param-payments_form": "Низа што го означува обликот на групата уплати преку кои е направено дарувањето.",
+	"apihelp-contributiontracking-param-email-opt": "Обратник на штикларникот за изземање од понатамошна е-пошта.",
+	"apihelp-contributiontracking-param-language": "Јазичен код на корисникот. Пораките ќе бидат соодветно преведени (кога е можно). Ова одредува и каква страница за благодарност ќе му се појави на корисникот при завршувањето на дарувањето во порталот.",
+	"apihelp-contributiontracking-param-country": "Код на земјата на корисникот.",
+	"apihelp-contributiontracking-param-contribution_tracking_id": "Наша назнака за тековниот придонес. Не се дава за нови придонеси.",
+	"apihelp-contributiontracking-param-returnto": "Низа што означува алтернативна страница за благорадност што ќе му се прикаже на корисникот при завршувањето на уплатата.",
+	"apihelp-contributiontracking-param-tshirt": "Дали има маица.",
+	"apihelp-contributiontracking-param-size": "Низа што ја означува посакуваната големина на горенаведената маица (ако ја има)",
+	"apihelp-contributiontracking-param-premium_language": "Јазичен код за маицата. Ова нема влијание врз преводот на пораките, туку се однесува само на натписот на самата маица.",
+	"apihelp-contributiontracking-param-currency_code": "Код на валутата за тековната уплата.",
+	"apihelp-contributiontracking-param-fname": "Име на дарителот.",
+	"apihelp-contributiontracking-param-lname": "Презиме на дарителот.",
+	"apihelp-contributiontracking-param-email": "Е-пошта на дарителот.",
+	"apihelp-contributiontracking-param-recurring_paypal": "Се укажува ако ова е повторлива уплата.",
+	"apihelp-contributiontracking-param-amountGiven": "Нормализиран износ.",
+	"apihelp-contributiontracking-example-1": "Проследи придонес"
+}

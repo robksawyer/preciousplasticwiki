@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"contributiontracking-desc": "Slědowanje darow za pósćiwańsku kampanju Wikimedije",
+	"contributiontracking": "Slědowanje darow",
+	"contrib-tracking-error": "Zmólka",
+	"contrib-tracking-error-text": "Njepłaśiwe słanje formulara",
+	"contrib-tracking-submitting": "Płaśenje wótpósćeła se k wobźěłowanjeju...",
+	"contrib-tracking-continue": "Joli njepósrědnjaš se awtomatiski dalej, klikni na tłocašk, aby dokóńcył swój dar.",
+	"contrib-tracking-redirect": "Buźoš se awtomatiski dalej pósrědnjaś, aby swójo dar dokóńcył.",
+	"contrib-tracking-button": "Dalej",
+	"contrib-tracking-item-name-onetime": "Jadnorazny dar",
+	"contrib-tracking-item-name-recurring": "Wóspjetujucy se mjasecny dar"
+}
