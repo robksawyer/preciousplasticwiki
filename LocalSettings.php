@@ -300,6 +300,8 @@ require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
 require_once("$IP/extensions/Memcached/Memcached.php");
 
+require_once("$IP/extensions/PdfHandler/PdfHandler.php");
+
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##
