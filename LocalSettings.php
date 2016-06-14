@@ -209,6 +209,12 @@ require_once 'Mail.php';
 
 require_once("$IP/extensions/Memcached/Memcached.php");
 
+# https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+$wgSpamBlacklistFiles = array(
+	"[[m:Spam blacklist]]",
+	"https://en.wikipedia.org/wiki/MediaWiki:Spam-blacklist"
+);
+
 //Email
 // $wgSMTP = array(
 //  'host'     => "smtp.postmarkapp.com", 						// could also be an IP address. Where the SMTP server is located
