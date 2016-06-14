@@ -306,8 +306,6 @@ $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagic
 $wgPdfInfo = '/app/bin/pdfinfo';
 $wgPdftoText = '/app/bin/pdftotext';
 
-require_once("$IP/extensions/ProofreadPage/ProofreadPage.php");
-
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##
