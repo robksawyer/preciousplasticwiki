@@ -294,11 +294,11 @@ $wgAddThispubid = getenv('ADD_THIS_KEY');
 require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
-$wgPdfProcessor = './bin/gs';
+$wgPdfProcessor = "$IP/bin/gs";
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
-$wgPdfInfo = './bin/pdfinfo';
-$wgPdftoText = './bin/pdftotext';
+$wgPdfInfo = "$IP/bin/pdfinfo";
+$wgPdftoText = "$IP/bin/pdftotext";
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
