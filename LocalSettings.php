@@ -182,6 +182,7 @@ wfLoadSkin( 'Vector' );
 # The following extensions were automatically enabled:
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
+wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'ConfirmEdit' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ImageMap' );
