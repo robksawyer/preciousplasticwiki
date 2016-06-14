@@ -190,7 +190,6 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'PdfHandler' );
 wfLoadExtension( 'LabeledSectionTransclusion' );
-// wfLoadExtension( 'ContributionTracking' );
 // wfLoadExtension( 'DonationInterface' );
 // wfLoadExtension( 'PayPal' );
 
@@ -301,13 +300,11 @@ require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
 require_once("$IP/extensions/Memcached/Memcached.php");
 
-require_once("$IP/extensions/PdfHandler/PdfHandler.php");
-
-$wgPdfProcessor = 'gs';
+$wgPdfProcessor = '/app/bin/gs';
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
-$wgPdfInfo = 'pdfinfo';
-$wgPdftoText = 'pdftotext';
+$wgPdfInfo = '/app/bin/pdfinfo';
+$wgPdftoText = '/app/bin/pdftotext';
 
 require_once("$IP/extensions/ProofreadPage/ProofreadPage.php");
 
