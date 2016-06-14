@@ -48,7 +48,9 @@
 		"mediawiki/maps": "*",
 		"intouch/newrelic": "^1.0",
 		"mediawiki/semantic-media-wiki": "~2.1",
-		"ext-memcached": "^2.2"
+		"ext-memcached": "^2.2",
+		"howtomakeaturn/pdfinfo": "^1.1",
+		"wrseward/pdf-parser": "^0.1.0"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",

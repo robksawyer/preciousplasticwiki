@@ -302,6 +302,12 @@ require_once("$IP/extensions/Memcached/Memcached.php");
 
 require_once("$IP/extensions/PdfHandler/PdfHandler.php");
 
+$wgPdfProcessor = 'gs';
+$wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
+// $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
+$wgPdfInfo = 'PDFInfo';
+$wgPdftoText = 'pdftotext';
+
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##

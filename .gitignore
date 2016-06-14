@@ -30,3 +30,4 @@ data/*
 vendor/
 *.bak
 mw-config/*
+.env
