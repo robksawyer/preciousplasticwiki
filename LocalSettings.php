@@ -190,7 +190,6 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
-// wfLoadExtension( 'PayPal' ); #borked
 
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
@@ -295,6 +294,7 @@ require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
 $wgPdfProcessor = "$IP/bin/gs";
+$wgPdfPostProcessor = "/usr/bin/convert";
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
 $wgPdfInfo = "$IP/bin/pdfinfo";
@@ -306,11 +306,6 @@ $wgPdftoText = "$IP/bin/pdftotext";
 // require_once("$IP/extensions/DonationInterface/DonationInterface.php");
 
 // $wgDonationInterfaceEnableAmazon = true;
-
-##
-# https://www.mediawiki.org/wiki/Extension:PayPal
-##
-// require_once("$IP/extensions/PayPal/PayPal.php");
 
 ##
 # Semantic MediaWiki Requirements

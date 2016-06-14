@@ -1,6 +1,0 @@
-{
-	"name": "shakeepers/paypal",
-	"description": "Fork of Paypal extension for MediaWiki",
-	"license": "GPL-2.0",
-	"type": "mediawiki-extension"
-}
