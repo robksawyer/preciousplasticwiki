@@ -238,7 +238,7 @@ class LocalS3File extends File {
 	 * Load metadata from the file itself
 	 */
 	function loadFromFile() {
-		$this->setProps( $this->getPropsFromPath( $this->getPath() ) );
+		$this->setProps( File::getPropsFromPath( $this->getPath() ) );
 	}
 
 	function getCacheFields( $prefix = 'img_' ) {
