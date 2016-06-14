@@ -194,7 +194,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'HTMLets' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'ContributionTracking' );
-wfLoadExtension( 'LabeledSectionTransclusion' );
+// wfLoadExtension( 'LabeledSectionTransclusion' );
 // wfLoadExtension( 'DonationInterface' );
 // wfLoadExtension( 'PayPal' );
 
