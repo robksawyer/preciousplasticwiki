@@ -327,7 +327,7 @@ class LocalS3File extends File {
 	/**
 	 * Load file metadata from cache or DB, unless already loaded
 	 */
-	function load() {
+	function load($flags = 0) {
 		if ( !$this->dataLoaded ) {
 			if ( !$this->loadFromCache() ) {
 				$this->loadFromDB();
@@ -789,7 +789,7 @@ class LocalS3File extends File {
 	/**
 	 * Delete all previously generated thumbnails, refresh metadata in memcached and purge the squid
 	 */
-	function purgeCache() {
+	function purgeCache($options = array()) {
 		// Refresh metadata cache
 		$this->purgeMetadataCache();
 

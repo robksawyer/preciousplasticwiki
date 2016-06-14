@@ -106,7 +106,7 @@ class FSs3Repo extends FileRepo {
 	/** Returns zone part of repo URL, plus base URL, to be appended to S3 base URL
 	 * @see FileRepo::getZoneUrl()
 	 */
-	function getZoneUrl( $zone ) {
+	function getZoneUrl( $zone, $ext = NULL ) {
 		switch ( $zone ) {
 			case 'public':
 				$retval = $this->url;
@@ -175,7 +175,7 @@ class FSs3Repo extends FileRepo {
 	 *     self::OVERWRITE_SAME    Overwrite the file if the destination exists and has the
 	 *                             same contents as the source (not implemented in S3)
 	 */
-	function storeBatch( $triplets, $flags = 0 ) {
+	function storeBatch( array $triplets, $flags = 0 ) {
 		wfDebug(__METHOD__." triplets: ".print_r($triplets,true)."flags: ".print_r($flags)."\n");
 		global $s3;
 		$status = $this->newGood();
@@ -408,7 +408,7 @@ class FSs3Repo extends FileRepo {
 	 * @param $flags Integer: bitfield, may be FileRepo::DELETE_SOURCE to indicate
 	 *        that the source files should be deleted if possible
 	 */
-	function publishBatch( $triplets, $flags = 0 ) {
+	function publishBatch( array $triplets, $flags = 0 ) {
 		// Perform initial checks
 		wfDebug(__METHOD__.": ".print_r($triplets,true));
 		global $s3;
