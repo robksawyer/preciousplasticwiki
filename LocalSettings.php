@@ -188,9 +188,9 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
-// wfLoadExtension( 'LabeledSectionTransclusion' );
-// wfLoadExtension( 'DonationInterface' );
-// wfLoadExtension( 'PayPal' );
+// wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
+// wfLoadExtension( 'DonationInterface' ); #borked
+// wfLoadExtension( 'PayPal' ); #borked
 
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
@@ -294,11 +294,11 @@ $wgAddThispubid = getenv('ADD_THIS_KEY');
 require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
-$wgPdfProcessor = '/app/bin/gs';
+$wgPdfProcessor = './bin/gs';
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
-$wgPdfInfo = '/app/bin/pdfinfo';
-$wgPdftoText = '/app/bin/pdftotext';
+$wgPdfInfo = './bin/pdfinfo';
+$wgPdftoText = './bin/pdftotext';
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
