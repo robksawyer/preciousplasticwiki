@@ -43,7 +43,7 @@ class SpecialMemcached extends SpecialPage {
 		parent::__construct('Memcached');
 	}
 
-	public function execute() {
+	public function execute($subPage) {
 		global $wgOut, $wgRequest, $wgUser, $wgMemc, $wgMemCachedServers;
 
 		wfProfileIn(__METHOD__);

@@ -1160,7 +1160,7 @@ class LocalS3File extends File {
 	 * @return FileRepoStatus object. On success, the value member contains the
 	 *     archive name, or an empty string if it was a new file.
 	 */
-	function publish( $srcPath, $flags = 0 ) {
+	function publish( $srcPath, $flags = 0, $options = array() ) {
 		$this->lock();
 		$dstRel = $this->getRel();
 		$archiveName = gmdate( 'YmdHis' ) . '!'. $this->getName();
@@ -1230,7 +1230,7 @@ class LocalS3File extends File {
 	 * @param $suppress
 	 * @return FileRepoStatus object.
 	 */
-	function delete( $reason, $suppress = false ) {
+	function delete( $reason, $suppress = false, $user = NULL ) {
 		$this->lock();
 		$batch = new LocalS3FileDeleteBatch( $this, $reason, $suppress );
 		$batch->addCurrent();
@@ -1330,7 +1330,7 @@ class LocalS3File extends File {
 	 * This is not used by ImagePage for local files, since (among other things)
 	 * it skips the parser cache.
 	 */
-	function getDescriptionText() {
+	function getDescriptionText( $lang = false ) {
 		global $wgParser;
 		$revision = Revision::newFromTitle( $this->title );
 		if ( !$revision ) return false;
@@ -1340,7 +1340,7 @@ class LocalS3File extends File {
 		return $pout->getText();
 	}
 
-	function getDescription() {
+	function getDescription($audience = self::FOR_PUBLIC, User $user = NULL) {
 		$this->load();
 		return $this->description;
 	}
