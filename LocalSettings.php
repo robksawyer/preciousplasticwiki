@@ -155,6 +155,14 @@ $wgGroupPermissions['*']['edit'] = false;
 ## names, ie 'vector', 'monobook':
 $wgDefaultSkin = "vector";
 
+
+$wgFileExtensions = array(
+	'png', 'gif', 'jpg', 'jpeg', 'tiff',
+	'ai', 'xls', 'pdf',  'xlsx',
+	'f3d', 'svg', 'igs', 'step', 'stl', 'iges',
+	'sat', 'smt'
+);
+
 # Enabled skins.
 # The following skins were automatically enabled:
 wfLoadSkin( 'CologneBlue' );
