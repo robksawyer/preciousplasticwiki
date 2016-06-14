@@ -339,7 +339,7 @@ class FSs3Repo extends FileRepo {
 	 *     Will mark all items found on S3 as true, no directory concept exists on the S3
 	 * @return Either array of files and existence flags, or false
 	 */
-	function fileExistsBatch( $files, $flags = 0 ) {
+	function fileExistsBatch( array $files, $flags = 0 ) {
 		global $s3;
 		$result = array();
 		foreach ( $files as $key => $file ) {
@@ -545,7 +545,7 @@ class FSs3Repo extends FileRepo {
 	 *        to the deleted zone root in the second element.
 	 * @return FileRepoStatus
 	 */
-	function deleteBatch( $sourceDestPairs ) {
+	function deleteBatch( array $sourceDestPairs ) {
 		wfDebug(__METHOD__.": ".print_r($sourceDestPairs,true)."\n");
 		global $s3;
 		$status = $this->newGood();
