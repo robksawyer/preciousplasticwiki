@@ -17,6 +17,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgShowExceptionDetails = getenv('SHOW_EXCEPTIONS');
 
+# https://www.mediawiki.org/wiki/Manual:MIME_type_detection
+$wgLoadFileinfoExtension = true;
+
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 

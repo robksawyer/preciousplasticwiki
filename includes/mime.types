@@ -1,4 +1,6 @@
 application/acad dwg
+application/sla stl
+application/STEP st, step, stp
 application/andrew-inset ez
 application/mac-binhex40 hqx
 application/mac-compactpro cpt
