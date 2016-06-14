@@ -119,6 +119,9 @@ $wgUseInstantCommons = true;
 ## available UTF-8 locale
 $wgShellLocale = "en_US.utf8";
 
+//Maximum amount of virtual memory available to shell processes under Linux, in KB.
+$wgMaxShellMemory = 307200;
+
 ## If you want to use image uploads under safe mode,
 ## create the directories images/archive, images/thumb and
 ## images/temp, and make them all writable. Then uncomment
