@@ -187,7 +187,6 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
-wfLoadExtension( 'HTMLets' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LabeledSectionTransclusion' );
 // wfLoadExtension( 'DonationInterface' );
