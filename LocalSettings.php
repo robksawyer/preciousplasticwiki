@@ -189,6 +189,7 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'PdfHandler' );
+wfLoadExtension( 'LabeledSectionTransclusion' );
 // wfLoadExtension( 'ContributionTracking' );
 // wfLoadExtension( 'DonationInterface' );
 // wfLoadExtension( 'PayPal' );
@@ -307,6 +308,8 @@ $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagic
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
 $wgPdfInfo = 'pdfinfo';
 $wgPdftoText = 'pdftotext';
+
+require_once("$IP/extensions/ProofreadPage/ProofreadPage.php");
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
