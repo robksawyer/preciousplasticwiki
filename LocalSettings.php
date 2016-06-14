@@ -174,19 +174,24 @@ wfLoadSkin( 'Vector' );
 # Enabled Extensions. Most extensions are enabled by including the base extension file here
 # but check specific extension documentation for more details
 # The following extensions were automatically enabled:
+wfLoadExtension( 'AddThis' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'ConfirmEdit' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ImageMap' );
+wfLoadExtension( 'FancyBoxThumbs' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PdfHandler' );
+wfLoadExtension( 'Memcached' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
+wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
+wfLoadExtension( 'HTMLets' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'ContributionTracking' );
 wfLoadExtension( 'LabeledSectionTransclusion' );
@@ -253,14 +258,14 @@ $wgLocalFileRepo = array(
 	'cloudFrontUrl' => $wgCloudFrontUrl
 );
 
-require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
+// require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
 $wgAllowImageMoving = true;
 
 // s3 filesystem repo - end
 
 //HTMLets
-require_once("$IP/extensions/HTMLets/HTMLets.php");
+// require_once("$IP/extensions/HTMLets/HTMLets.php");
 $wgHTMLetsDirectory = "$IP/htmlets";
 
 //FontAwesome
@@ -284,19 +289,19 @@ $wgHTMLetsDirectory = "$IP/htmlets";
 
 //Social Sharing
 //https://www.mediawiki.org/wiki/Extension:AddThis
-require_once "$IP/extensions/AddThis/AddThis.php";
+// require_once "$IP/extensions/AddThis/AddThis.php";
 $wgAddThisHeader = true;
 $wgAddThispubid = getenv('ADD_THIS_KEY');
 
 //Fancy thumbs
-require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
+// require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
 //$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
 
-require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
+// require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 
-require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
+// require_once("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
-require_once("$IP/extensions/Memcached/Memcached.php");
+// require_once("$IP/extensions/Memcached/Memcached.php");
 
 $wgPdfProcessor = '/app/bin/gs';
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
