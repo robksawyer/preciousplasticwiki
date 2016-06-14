@@ -299,6 +299,14 @@ require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
 require_once "$IP/extensions/Memcached/Memcached.php";
 
+require_once "$IP/extensions/PDFEmbed/PDFEmbed.php";
+
+//Default width for the PDF object container.
+$pdfEmbed['width'] = 800;
+
+//Default height for the PDF object container.
+$pdfEmbed['height'] = 1090;
+
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##
