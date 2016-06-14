@@ -188,7 +188,7 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
-wfLoadExtension( 'LabeledSectionTransclusion' );
+// wfLoadExtension( 'LabeledSectionTransclusion' );
 // wfLoadExtension( 'DonationInterface' );
 // wfLoadExtension( 'PayPal' );
 
