@@ -189,12 +189,13 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'HTMLets' );
 wfLoadExtension( 'UniversalLanguageSelector' );
-wfLoadExtension( 'ContributionTracking' );
 wfLoadExtension( 'LabeledSectionTransclusion' );
 // wfLoadExtension( 'DonationInterface' );
 // wfLoadExtension( 'PayPal' );
 
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
+
+require_once( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
 
 # End of automatically generated settings.
 # Add more configuration options below.
