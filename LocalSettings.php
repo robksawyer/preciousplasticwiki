@@ -305,7 +305,7 @@ require_once("$IP/extensions/PdfHandler/PdfHandler.php");
 $wgPdfProcessor = 'gs';
 $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagick
 // $wgPdfPostProcessor = 'convert'; // if not defined via ImageMagick
-$wgPdfInfo = 'PDFInfo';
+$wgPdfInfo = 'pdfinfo';
 $wgPdftoText = 'pdftotext';
 
 ##
