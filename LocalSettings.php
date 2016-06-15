@@ -304,7 +304,10 @@ $wgHTMLetsDirectory = "$IP/htmlets";
 //Social Sharing
 //https://www.mediawiki.org/wiki/Extension:AddThis
 require_once "$IP/extensions/AddThis/AddThis.php";
-$wgAddThisHeader = true;
+$wgAddThisHeader = false;
+$wgAddThisBackground = "transparent";
+$wgAddThisBorder = "none";
+$wgAddThisMain = false;
 $wgAddThispubid = getenv('ADD_THIS_KEY');
 
 //Fancy thumbs
