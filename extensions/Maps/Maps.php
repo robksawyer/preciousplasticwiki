@@ -6,7 +6,7 @@
  * @links https://github.com/JeroenDeDauw/Maps/issues Support
  * @links https://github.com/JeroenDeDauw/Maps Source code
  *
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 
@@ -19,7 +19,7 @@ if ( defined( 'Maps_VERSION' ) ) {
 	return 1;
 }
 
-define( 'Maps_VERSION' , '3.4' );
+define( 'Maps_VERSION' , '3.5.0' );
 
 // Include the composer autoloader if it is present.
 if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
@@ -41,10 +41,12 @@ call_user_func( function() {
 		'name' => 'Maps' ,
 		'version' => Maps_VERSION ,
 		'author' => array(
-			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]'
+			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
+			'...'
 		) ,
 		'url' => 'https://github.com/JeroenDeDauw/Maps/blob/master/README.md#maps' ,
-		'descriptionmsg' => 'maps-desc'
+		'descriptionmsg' => 'maps-desc',
+		'license-name' => 'GPL-2.0+'
 	);
 
 	// The different coordinate notations.
@@ -69,8 +71,13 @@ call_user_func( function() {
 
 	// Register the initialization function of Maps.
 	$GLOBALS['wgExtensionFunctions'][] = function () {
-		wfRunHooks( 'MappingServiceLoad' );
-		wfRunHooks( 'MappingFeatureLoad' );
+
+		if ( $GLOBALS['egMapsGMaps3Language'] === '' ) {
+			$GLOBALS['egMapsGMaps3Language'] = $GLOBALS['wgLang'];
+		}
+
+		Hooks::run( 'MappingServiceLoad' );
+		Hooks::run( 'MappingFeatureLoad' );
 
 		if ( in_array( 'googlemaps3', $GLOBALS['egMapsAvailableServices'] ) ) {
 			$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';

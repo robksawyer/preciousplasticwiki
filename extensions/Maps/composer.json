@@ -48,7 +48,13 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "3.4.x-dev"
+			"dev-master": "3.5.x-dev"
 		}
+	},
+	"config": {
+		"process-timeout": 0
+	},
+	"scripts":{
+		"phpunit": "php ../../tests/phpunit/phpunit.php -c phpunit.xml.dist"
 	}
 }
