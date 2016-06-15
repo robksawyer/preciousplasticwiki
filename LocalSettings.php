@@ -202,6 +202,11 @@ require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
+require_once("$IP/extensions/HTMLTags/HTMLTags.php");
+
+$wgHTMLTagsAttributes['a'] = array( 'href', 'class' );
+$wgHTMLTagsAttributes['iframe'] = array( 'src', 'width', 'height', 'border' );
+
 # End of automatically generated settings.
 # Add more configuration options below.
 
