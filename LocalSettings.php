@@ -200,8 +200,6 @@ wfLoadExtension( 'UniversalLanguageSelector' );
 
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
-require_once("$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php");
-
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
 # End of automatically generated settings.
