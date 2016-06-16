@@ -35,7 +35,7 @@ class FSs3Repo extends FileRepo {
 
 		// Optional settings
 		$this->AWS_S3_PUBLIC = isset( $info['AWS_S3_PUBLIC'] ) ? $info['AWS_S3_PUBLIC'] : false;
-		$s3->useSSL = $this->AWS_S3_SSL = isset( $info['AWS_S3_SSL'] ) ? $info['AWS_S3_SSL'] : true;
+		S3::useSSL = $this->AWS_S3_SSL = isset( $info['AWS_S3_SSL'] ) ? $info['AWS_S3_SSL'] : true;
 		$this->url = isset( $info['url'] ) ? $info['url'] :
 			($this->AWS_S3_SSL ? "https://" : "http://") . "s3.amazonaws.com/" .
 				$this->AWS_S3_BUCKET . "/" . $this->directory;
