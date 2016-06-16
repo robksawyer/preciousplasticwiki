@@ -36,6 +36,9 @@ use S3;
 use LocalS3FileMoveBatch;
 use LocalS3FileRestoreBatch;
 use LocalS3FileDeleteBatch;
+use LinksUpdate;
+use SquidUpdate;
+use HTMLCacheUpdate;
 
 class LocalS3File extends File {
 
@@ -781,31 +784,34 @@ class LocalS3File extends File {
 		}
 	}
 
+	/** getTransformScript inherited */
+	/** getUnscaledThumb inherited */
+	/** thumbName inherited */
+	/** createThumb inherited */
+	/** transform inherited */
 	/** getHandler inherited */
 	/** iconThumb inherited */
 	/** getLastError inherited */
-
 	/**
 	 * Get all thumbnail names previously generated for this file
+	 * @param string|bool $archiveName Name of an archive file, default false
+	 * @return array First element is the base dir, then files in that base dir.
 	 */
-	function getThumbnails() {
-		$this->load();
-		$files = array();
-		$dir = $this->getThumbPath();
-
-		if ( is_dir( $dir ) ) {
-			$handle = opendir( $dir );
-
-			if ( $handle ) {
-				while ( false !== ( $file = readdir( $handle ) ) ) {
-					if ( $file{0} != '.' ) {
-						$files[] = $file;
-					}
-				}
-				closedir( $handle );
-			}
+	function getThumbnails( $archiveName = false ) {
+		if ( $archiveName ) {
+			$dir = $this->getArchiveThumbPath( $archiveName );
+		} else {
+			$dir = $this->getThumbPath();
 		}
-
+		$backend = $this->repo->getBackend();
+		$files = array( $dir );
+		try {
+			$iterator = $backend->getFileList( array( 'dir' => $dir ) );
+			foreach ( $iterator as $file ) {
+				$files[] = $file;
+			}
+		} catch ( FileBackendError $e ) {
+		} // suppress (bug 54674)
 		return $files;
 	}
 
@@ -813,9 +819,7 @@ class LocalS3File extends File {
 	 * Refresh metadata in memcached, but don't touch thumbnails or squid
 	 */
 	function purgeMetadataCache() {
-		$this->loadFromDB();
-		$this->saveToCache();
-		$this->purgeHistory();
+		$this->invalidateCache();
 	}
 
 	/**
@@ -831,38 +835,97 @@ class LocalS3File extends File {
 	}
 
 	/**
-	 * Delete all previously generated thumbnails, refresh metadata in memcached and purge the squid
+	 * Delete all previously generated thumbnails, refresh metadata in memcached and purge the squid.
+	 *
+	 * @param array $options An array potentially with the key forThumbRefresh.
+	 *
+	 * @note This used to purge old thumbnails by default as well, but doesn't anymore.
 	 */
-	function purgeCache($options = array()) {
+	function purgeCache( $options = array() ) {
 		// Refresh metadata cache
 		$this->purgeMetadataCache();
-
 		// Delete thumbnails
-		$this->purgeThumbnails();
-
+		$this->purgeThumbnails( $options );
 		// Purge squid cache for this file
 		SquidUpdate::purge( array( $this->getURL() ) );
 	}
 
 	/**
-	 * Delete cached transformed files
+	 * Delete cached transformed files for an archived version only.
+	 * @param string $archiveName Name of the archived file
 	 */
-	function purgeThumbnails() {
+	function purgeOldThumbnails( $archiveName ) {
 		global $wgUseSquid;
-		// Delete thumbnails
-		$files = $this->getThumbnails();
-		$dir = $this->getThumbPath();
-		$urls = array();
+		// Get a list of old thumbnails and URLs
+		$files = $this->getThumbnails( $archiveName );
+		// Purge any custom thumbnail caches
+		Hooks::run( 'LocalFilePurgeThumbnails', array( $this, $archiveName ) );
+		$dir = array_shift( $files );
+		$this->purgeThumbList( $dir, $files );
+		// Purge the squid
+		if ( $wgUseSquid ) {
+			$urls = array();
+			foreach ( $files as $file ) {
+				$urls[] = $this->getArchiveThumbUrl( $archiveName, $file );
+			}
+			SquidUpdate::purge( $urls );
+		}
+	}
+
+	/**
+	 * Delete a list of thumbnails visible at urls
+	 * @param string $dir Base dir of the files.
+	 * @param array $files Array of strings: relative filenames (to $dir)
+	 */
+	protected function purgeThumbList( $dir, $files ) {
+		$fileListDebug = strtr(
+			var_export( $files, true ),
+			array( "\n" => '' )
+		);
+		wfDebug( __METHOD__ . ": $fileListDebug\n" );
+		$purgeList = array();
 		foreach ( $files as $file ) {
 			# Check that the base file name is part of the thumb name
 			# This is a basic sanity check to avoid erasing unrelated directories
-			if ( strpos( $file, $this->getName() ) !== false ) {
-				$url = $this->getThumbUrl( $file );
-				$urls[] = $url;
-				@unlink( "$dir/$file" );
+			if ( strpos( $file, $this->getName() ) !== false
+				|| strpos( $file, "-thumbnail" ) !== false // "short" thumb name
+			) {
+				$purgeList[] = "{$dir}/{$file}";
 			}
 		}
+		# Delete the thumbnails
+		$this->repo->quickPurgeBatch( $purgeList );
+		# Clear out the thumbnail directory if empty
+		$this->repo->quickCleanDir( $dir );
+	}
 
+	/**
+	 * Delete cached transformed files for the current version only.
+	 * @param array $options
+	 */
+	function purgeThumbnails( $options = array() ) {
+		global $wgUseSquid;
+		// Delete thumbnails
+		$files = $this->getThumbnails();
+		// Always purge all files from squid regardless of handler filters
+		$urls = array();
+		if ( $wgUseSquid ) {
+			foreach ( $files as $file ) {
+				$urls[] = $this->getThumbUrl( $file );
+			}
+			array_shift( $urls ); // don't purge directory
+		}
+		// Give media handler a chance to filter the file purge list
+		if ( !empty( $options['forThumbRefresh'] ) ) {
+			$handler = $this->getHandler();
+			if ( $handler ) {
+				$handler->filterThumbnailPurgeList( $files, $options );
+			}
+		}
+		// Purge any custom thumbnail caches
+		Hooks::run( 'LocalFilePurgeThumbnails', array( $this, false ) );
+		$dir = array_shift( $files );
+		$this->purgeThumbList( $dir, $files );
 		// Purge the squid
 		if ( $wgUseSquid ) {
 			SquidUpdate::purge( $urls );
@@ -1012,19 +1075,19 @@ class LocalS3File extends File {
 	 * $oldver, $desc, $license = '', $copyStatus = '', $source = '', $watch = false, $timestamp = false, User $user = NULL
 	 * @deprecated use upload()
 	 */
-	function recordUpload( $oldver, $desc, $license = '', $copyStatus = '', $source = '',
-		$watch = false, $timestamp = false, User $user = NULL )
-	{
+	function recordUpload( $oldver, $desc, $license = '', $copyStatus = '', $source = '', $watch = false, $timestamp = false, User $user = null ) {
+		if ( !$user ) {
+			global $wgUser;
+			$user = $wgUser;
+		}
 		$pageText = SpecialUpload::getInitialPageText( $desc, $license, $copyStatus, $source );
-		if ( !$this->recordUpload2( $oldver, $desc, $pageText ) ) {
+		if ( !$this->recordUpload2( $oldver, $desc, $pageText, false, $timestamp, $user ) ) {
 			return false;
 		}
 		if ( $watch ) {
-			global $wgUser;
-			$wgUser->addWatch( $this->getTitle() );
+			$user->addWatch( $this->getTitle() );
 		}
 		return true;
-
 	}
 
 	/**
@@ -1240,6 +1303,17 @@ class LocalS3File extends File {
 			LinksUpdate::queueRecursiveJobsForTable( $this->getTitle(), 'imagelinks' );
 		}
 		return true;
+	}
+
+	/**
+	 * Purge the file object/metadata cache
+	 */
+	function invalidateCache() {
+		$key = $this->getCacheKey();
+		if ( !$key ) {
+			return;
+		}
+		ObjectCache::getMainWANInstance()->delete( $key );
 	}
 
 	/**
