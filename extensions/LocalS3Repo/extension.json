@@ -20,7 +20,7 @@
 	],
 	"AutoloadClasses": {
 		"S3": "S3.php",
-		"LocalS3Repo": "FSs3Repo.php",
+		"FSs3Repo": "FSs3Repo.php",
 		"LocalS3FileDeleteBatch": "LocalS3FileDeleteBatch.php",
 		"LocalS3FileMoveBatch": "LocalS3FileMoveBatch.php",
 		"LocalS3FileRestoreBatch": "LocalS3FileRestoreBatch.php",
