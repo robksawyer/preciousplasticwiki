@@ -663,7 +663,7 @@ class FSs3Repo extends FileRepo {
 	 */
 	function getFileProps( $virtualUrl ) {
 		$path = $this->resolveVirtualUrl( $virtualUrl );
-		return File::getPropsFromPath( $path );
+		return FSFile::getPropsFromPath( $path );
 	}
 
 	/**
