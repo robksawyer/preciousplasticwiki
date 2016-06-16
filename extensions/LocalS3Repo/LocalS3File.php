@@ -1093,8 +1093,7 @@ class LocalS3File extends File {
 	/**
 	 * Record a file upload in the upload log and the image table
 	 */
-	function recordUpload2( $oldver, $comment, $pageText, $props = false, $timestamp = false, $user = null )
-	{
+	function recordUpload2( $oldver, $comment, $pageText, $props = false, $timestamp = false, $user = null ) {
 		if( is_null( $user ) ) {
 			global $wgUser;
 			$user = $wgUser;
