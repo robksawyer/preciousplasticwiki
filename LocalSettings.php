@@ -195,10 +195,11 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
+wfLoadExtension( 'LocalS3Repo' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
-require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
+// require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
 require_once("$IP/extensions/ContributionTracking/ContributionTracking.php");
 
