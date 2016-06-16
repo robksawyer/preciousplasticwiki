@@ -9,14 +9,21 @@
  * database access or registration.
  * @ingroup FileRepo
  */
+
+if (!class_exists('S3')) require_once 'S3.php';
+if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
+
 class FSs3Repo extends FileRepo {
-	var $directory, $deletedDir, $deletedHashLevels, $fileMode;
-	var $urlbase;
-	var $AWS_ACCESS_KEY, $AWS_SECRET_KEY, $AWS_S3_BUCKET, $AWS_S3_PUBLIC, $AWS_S3_SSL;
-	var $cloudFrontUrl;
-	var $fileFactory = array( 'UnregisteredLocalFile', 'newFromTitle' );
-	var $oldFileFactory = false;
-	var $pathDisclosureProtection = 'simple';
+	public var $AWS_ACCESS_KEY, $AWS_SECRET_KEY, $AWS_S3_BUCKET, $AWS_S3_PUBLIC, $AWS_S3_SSL;
+
+	public var $directory, $deletedDir, $deletedHashLevels, $fileMode;
+	public var $urlbase;
+	public var $cloudFrontUrl;
+	public var $fileFactory = array( 'UnregisteredLocalFile', 'newFromTitle' );
+	public var $oldFileFactory = false;
+	public var $pathDisclosureProtection = 'simple';
+
+	public var $s3;
 
 	function __construct( $info ) {
 		parent::__construct( $info );
@@ -27,33 +34,34 @@ class FSs3Repo extends FileRepo {
 		$this->AWS_ACCESS_KEY = $info['AWS_ACCESS_KEY'];
 		$this->AWS_SECRET_KEY = $info['AWS_SECRET_KEY'];
 		$this->AWS_S3_BUCKET = $info['AWS_S3_BUCKET'];
+
 		$this->cloudFrontUrl = $info['cloudFrontUrl'];
 		$this->cloudFrontDirectory = $this->cloudFrontUrl.($this->directory ? $this->directory : $info['wgUploadDirectory']);
 
-		global $s3;
-		$s3->setAuth($this->AWS_ACCESS_KEY, $this->AWS_SECRET_KEY);
+		$this->AWS_S3_SSL = isset( $info['AWS_S3_SSL'] ) ? $info['AWS_S3_SSL'] : true;
+		$this->s3 = new S3($this->AWS_ACCESS_KEY, $this->AWS_SECRET_KEY, $this->AWS_S3_SSL);
 
 		// Optional settings
 		$this->AWS_S3_PUBLIC = isset( $info['AWS_S3_PUBLIC'] ) ? $info['AWS_S3_PUBLIC'] : false;
-		S3::useSSL = $this->AWS_S3_SSL = isset( $info['AWS_S3_SSL'] ) ? $info['AWS_S3_SSL'] : true;
-		$this->url = isset( $info['url'] ) ? $info['url'] :
-			($this->AWS_S3_SSL ? "https://" : "http://") . "s3.amazonaws.com/" .
-				$this->AWS_S3_BUCKET . "/" . $this->directory;
+
+		$this->url = isset( $info['url'] ) ? $info['url'] : ($this->AWS_S3_SSL ? "https://" : "http://") . "s3.amazonaws.com/" . $this->AWS_S3_BUCKET . "/" . $this->directory;
 		$this->hashLevels = isset( $info['hashLevels'] ) ? $info['hashLevels'] : 2;
-		$this->deletedHashLevels = isset( $info['deletedHashLevels'] ) ?
-			$info['deletedHashLevels'] : $this->hashLevels;
+		$this->deletedHashLevels = isset( $info['deletedHashLevels'] ) ? $info['deletedHashLevels'] : $this->hashLevels;
 		$this->deletedDir = isset( $info['deletedDir'] ) ? $info['deletedDir'] : false;
 		$this->fileMode = isset( $info['fileMode'] ) ? $info['fileMode'] : 0644;
+
 		if ( isset( $info['thumbDir'] ) ) {
 			$this->thumbDir =  $info['thumbDir'];
 		} else {
 			$this->thumbDir = "{$this->directory}/thumb";
 		}
+
 		if ( isset( $info['thumbUrl'] ) ) {
 			$this->thumbUrl = $info['thumbUrl'];
 		} else {
 			$this->thumbUrl = "{$this->url}/thumb";
 		}
+
 		$this->urlbase = $info['urlbase'];
 	}
 
