@@ -29,8 +29,11 @@ define( 'MW_FILE_VERSION', 8 );
  * @ingroup FileRepo
  */
 
- if (!class_exists('S3')) require_once 'S3.php';
- if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
+use ManualLogEntry;
+use WikiFilePage;
+
+if (!class_exists('S3')) require_once 'S3.php';
+if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileMoveBatch.php");
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileRestoreBatch.php");
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileDeleteBatch.php");
@@ -706,8 +709,9 @@ class LocalS3File extends File {
 			return new S3($credentials['AWS_ACCESS_KEY'], $credentials['AWS_SECRET_KEY'], $credentials['$AWS_S3_SSL']);
 		}
 
-	/** Get the URL of the thumbnail directory, or a particular file if $suffix is specified.
-	 *  $suffix is a path relative to the S3 bucket, and includes the upload directory
+	/**
+	 * Get the URL of the thumbnail directory, or a particular file if $suffix is specified.
+	 * $suffix is a path relative to the S3 bucket, and includes the upload directory
 	 */
 	function getThumbUrl( $suffix = false ) {
 		if($this->repo->cloudFrontUrl)
