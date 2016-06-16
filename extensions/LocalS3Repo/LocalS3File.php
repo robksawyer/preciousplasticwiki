@@ -392,7 +392,7 @@ class LocalS3File extends File {
 		//This is a total hack, but PDFs seem to be causing issues here because they have large metadata values.
 		$ignored_media_types = array('pdf');
 
-		if( !in_array($this->media_type, $ignored_media_types) ){
+		if( !in_array($minor, $ignored_media_types) ){
 			$dbw->update( 'image',
 				array(
 					'img_width' => $this->width,
