@@ -14,16 +14,16 @@ if (!class_exists('S3')) require_once 'S3.php';
 if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
 
 class FSs3Repo extends FileRepo {
-	public var $AWS_ACCESS_KEY, $AWS_SECRET_KEY, $AWS_S3_BUCKET, $AWS_S3_PUBLIC, $AWS_S3_SSL;
+	 ar $AWS_ACCESS_KEY, $AWS_SECRET_KEY, $AWS_S3_BUCKET, $AWS_S3_PUBLIC, $AWS_S3_SSL;
 
-	public var $directory, $deletedDir, $deletedHashLevels, $fileMode;
-	public var $urlbase;
-	public var $cloudFrontUrl;
-	public var $fileFactory = array( 'UnregisteredLocalFile', 'newFromTitle' );
-	public var $oldFileFactory = false;
-	public var $pathDisclosureProtection = 'simple';
+	var $directory, $deletedDir, $deletedHashLevels, $fileMode;
+	var $urlbase;
+	var $cloudFrontUrl;
+	var $fileFactory = array( 'UnregisteredLocalFile', 'newFromTitle' );
+	var $oldFileFactory = false;
+	var $pathDisclosureProtection = 'simple';
 
-	public var $s3;
+	var $s3;
 
 	function __construct( $info ) {
 		parent::__construct( $info );
