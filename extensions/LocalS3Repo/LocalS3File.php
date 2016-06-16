@@ -388,19 +388,25 @@ class LocalS3File extends File {
 		}
 		wfDebug( __METHOD__ . ': upgrading ' . $this->getName() . " to the current schema\n" );
 
-		$dbw->update( 'image',
-			array(
-				'img_width' => $this->width,
-				'img_height' => $this->height,
-				'img_bits' => $this->bits,
-				'img_media_type' => $this->media_type,
-				'img_major_mime' => $major,
-				'img_minor_mime' => $minor,
-				'img_metadata' => $this->metadata,
-				'img_sha1' => $this->sha1,
-			), array( 'img_name' => $this->getName() ),
-			__METHOD__
-		);
+		//TODO: Handle this properly.
+		//This is a total hack, but PDFs seem to be causing issues here because they have large metadata values.
+		$ignored_media_types = array('pdf');
+
+		if( !in_array($this->media_type, $ignored_media_types) ){
+			$dbw->update( 'image',
+				array(
+					'img_width' => $this->width,
+					'img_height' => $this->height,
+					'img_bits' => $this->bits,
+					'img_media_type' => $this->media_type,
+					'img_major_mime' => $major,
+					'img_minor_mime' => $minor,
+					'img_metadata' => $this->metadata,
+					'img_sha1' => $this->sha1,
+				), array( 'img_name' => $this->getName() ),
+				__METHOD__
+			);
+		}
 		$this->saveToCache();
 		wfProfileOut( __METHOD__ );
 	}
