@@ -1138,6 +1138,8 @@ class LocalS3File extends File {
 			$dbw->query( "UPDATE $site_stats SET ss_images=ss_images+1", __METHOD__ );
 		}
 
+		$descTitle = $this->getTitle();
+		$descId = $descTitle->getArticleID();
 		$wikiPage = new WikiFilePage( $descTitle );
 		$wikiPage->setFile( $this );
 		// Add the log entry...
