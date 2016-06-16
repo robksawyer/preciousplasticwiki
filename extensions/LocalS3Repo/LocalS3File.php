@@ -32,11 +32,10 @@ define( 'MW_FILE_VERSION', 8 );
 use ManualLogEntry;
 use WikiFilePage;
 
-if (!class_exists('S3')) require_once 'S3.php';
-if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
-require_once("$IP/extensions/LocalS3Repo/LocalS3FileMoveBatch.php");
-require_once("$IP/extensions/LocalS3Repo/LocalS3FileRestoreBatch.php");
-require_once("$IP/extensions/LocalS3Repo/LocalS3FileDeleteBatch.php");
+use S3;
+use LocalS3FileMoveBatch;
+use LocalS3FileRestoreBatch;
+use LocalS3FileDeleteBatch;
 
 class LocalS3File extends File {
 
