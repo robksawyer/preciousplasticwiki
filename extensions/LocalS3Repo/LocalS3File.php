@@ -29,6 +29,8 @@ define( 'MW_FILE_VERSION', 8 );
  * @ingroup FileRepo
  */
 
+ if (!class_exists('S3')) require_once 'S3.php';
+ if (!class_exists('S3')) require_once '$IP/extensions/LocalS3Repo/S3.php';
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileMoveBatch.php");
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileRestoreBatch.php");
 require_once("$IP/extensions/LocalS3Repo/LocalS3FileDeleteBatch.php");
@@ -648,6 +650,8 @@ class LocalS3File extends File {
 
 			wfDebug( __METHOD__.": Doing stat for $thumbPath\n  ($thumbUrl)\n" );
 			$this->migrateThumbFile( $thumbName );
+
+			$s3 = self::getS3Instance();
 			$info = $s3->getObjectInfo($this->repo->AWS_S3_BUCKET, $thumbPath);
 			wfDebug(__METHOD__." thumbPath: $thumbPath\ninfo:".print_r($info,true)."\n");
 			if ( $info /*file_exists( $thumbPath )*/ ) {
@@ -692,6 +696,16 @@ class LocalS3File extends File {
 		return is_object( $thumb ) ? $thumb : false;
 	}
 
+	/**
+	 * Total hack for retrieving an S3 instance. This should really be rewritten.
+	 * @param
+	 * @return S3
+	 */
+		function getS3Instance(){
+			$credentials = self::getCredentials();
+			return new S3($credentials['AWS_ACCESS_KEY'], $credentials['AWS_SECRET_KEY'], $credentials['$AWS_S3_SSL']);
+		}
+
 	/** Get the URL of the thumbnail directory, or a particular file if $suffix is specified.
 	 *  $suffix is a path relative to the S3 bucket, and includes the upload directory
 	 */
@@ -721,12 +735,14 @@ class LocalS3File extends File {
 	* May return false if the file is not locally accessible.
 	*/
 	public function getPath( $forceExist=true ) {
-		global $s3;
+		$s3 = self::getS3Instance();
 		if ( !isset( $this->tempPath ) ) {
 			$this->tempPath = tempnam(wfTempDir(), "s3file-");
-			$info = $s3->getObject($this->repo->AWS_S3_BUCKET,
-				$this->repo->directory . '/'  . $this->getUrlRel(), $this->tempPath);
-			if(!$info) $this->tempPath = false;
+
+			$info = $s3->getObject($this->repo->AWS_S3_BUCKET, $this->repo->directory . '/'  . $this->getUrlRel(), $this->tempPath);
+			if(!$info) {
+				$this->tempPath = false;
+			}
 		}
 		return $this->tempPath;
 	}
