@@ -185,7 +185,6 @@ class FSs3Repo extends FileRepo {
 	 */
 	function storeBatch( array $triplets, $flags = 0 ) {
 		wfDebug(__METHOD__." triplets: ".print_r($triplets,true)."flags: ".print_r($flags)."\n");
-		global $s3;
 		$status = $this->newGood();
 		foreach ( $triplets as $i => $triplet ) {
 			list( $srcPath, $dstZone, $dstRel ) = $triplet;
@@ -292,7 +291,6 @@ class FSs3Repo extends FileRepo {
 	 *     self::DELETE_SOURCE     Delete the toAppend file after append
 	 */
 	function append( $srcPath, $toAppendPath, $flags = 0 ) {
-		global $s3;
 		$status = $this->newGood();
 
 		// Resolve the virtual URL
@@ -348,7 +346,6 @@ class FSs3Repo extends FileRepo {
 	 * @return Either array of files and existence flags, or false
 	 */
 	function fileExistsBatch( array $files, $flags = 0 ) {
-		global $s3;
 		$result = array();
 		foreach ( $files as $key => $file ) {
 			if ( self::isVirtualUrl( $file ) ) {
@@ -401,7 +398,6 @@ class FSs3Repo extends FileRepo {
 	 */
 	function freeTemp( $virtualUrl ) {
 		wfDebug(__METHOD__.": ".print_r($virtualUrl,true)."\n");
-		global $s3;
 		$s3path = $virtualUrl;
 		$infoS3  = $s3->getObjectInfo($this->AWS_S3_BUCKET, $s3path); // see if on S3
 		wfDebug(__METHOD__." s3path: $s3path, infoS3:".print_r($infoS3,true)."\n");
@@ -419,7 +415,7 @@ class FSs3Repo extends FileRepo {
 	function publishBatch( array $triplets, $flags = 0 ) {
 		// Perform initial checks
 		wfDebug(__METHOD__.": ".print_r($triplets,true));
-		global $s3;
+
 		$status = $this->newGood( array() );
 		foreach ( $triplets as $i => $triplet ) {
 			list( $srcPath, $dstRel, $archiveRel ) = $triplet;
@@ -555,7 +551,6 @@ class FSs3Repo extends FileRepo {
 	 */
 	function deleteBatch( array $sourceDestPairs ) {
 		wfDebug(__METHOD__.": ".print_r($sourceDestPairs,true)."\n");
-		global $s3;
 		$status = $this->newGood();
 		if ( !$this->deletedDir ) {
 			throw new MWException( __METHOD__.': no valid deletion archive directory' );
@@ -649,7 +644,6 @@ class FSs3Repo extends FileRepo {
 	 * Uses the filesystem even in child classes.
 	 */
 	function enumFilesInFS( $callback ) {
-		global $s3;
 		$s3contents = $s3->getBucket($this->AWS_S3_BUCKET, $this->directory."/");
 		wfDebug(__METHOD__." :".print_r($s3contents,true)."\n");
 		foreach( $s3contents as $path ) {
