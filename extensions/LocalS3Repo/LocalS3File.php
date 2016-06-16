@@ -1142,22 +1142,21 @@ class LocalS3File extends File {
 		}
 
 		$descTitle = $this->getTitle();
-		$descId = $descTitle->getArticleID();
 		$wikiPage = new WikiFilePage( $descTitle );
 		$wikiPage->setFile( $this );
-		// Add the log entry...
-		$logEntry = new ManualLogEntry( 'upload', $reupload ? 'overwrite' : 'upload' );
-		$logEntry->setTimestamp( $this->timestamp );
+		# Add the log entry
+		$action = $reupload ? 'overwrite' : 'upload';
+		$logEntry = new ManualLogEntry( 'upload', $action );
 		$logEntry->setPerformer( $user );
 		$logEntry->setComment( $comment );
 		$logEntry->setTarget( $descTitle );
 		// Allow people using the api to associate log entries with the upload.
 		// Log has a timestamp, but sometimes different from upload timestamp.
 		$logEntry->setParameters(
-			[
+			array(
 				'img_sha1' => $this->sha1,
 				'img_timestamp' => $timestamp,
-			]
+			)
 		);
 		// Note we keep $logId around since during new image
 		// creation, page doesn't exist yet, so log_page = 0
@@ -1166,130 +1165,80 @@ class LocalS3File extends File {
 		// For a similar reason, we avoid making an RC entry
 		// now and wait until the page exists.
 		$logId = $logEntry->insert();
-		if ( $descTitle->exists() ) {
+		$exists = $descTitle->exists();
+		if ( $exists ) {
+			// Page exists, do RC entry now (otherwise we wait for later).
+			$logEntry->publish( $logId );
+		}
+		if ( $exists ) {
+			# Create a null revision
+			$latest = $descTitle->getLatestRevID();
 			// Use own context to get the action text in content language
 			$formatter = LogFormatter::newFromEntry( $logEntry );
 			$formatter->setContext( RequestContext::newExtraneousContext( $descTitle ) );
 			$editSummary = $formatter->getPlainActionText();
 			$nullRevision = Revision::newNullRevision(
 				$dbw,
-				$descId,
+				$descTitle->getArticleID(),
 				$editSummary,
 				false,
 				$user
 			);
-			if ( $nullRevision ) {
+			if ( !is_null( $nullRevision ) ) {
 				$nullRevision->insertOn( $dbw );
-				Hooks::run(
-					'NewRevisionFromEditComplete',
-					[ $wikiPage, $nullRevision, $nullRevision->getParentId(), $user ]
-				);
+				Hooks::run( 'NewRevisionFromEditComplete', array( $wikiPage, $nullRevision, $latest, $user ) );
 				$wikiPage->updateRevisionOn( $dbw, $nullRevision );
-				// Associate null revision id
-				$logEntry->setAssociatedRevId( $nullRevision->getId() );
 			}
-			$newPageContent = null;
+		}
+		# Commit the transaction now, in case something goes wrong later
+		# The most important thing is that files don't get lost, especially archives
+		# NOTE: once we have support for nested transactions, the commit may be moved
+		#       to after $wikiPage->doEdit has been called.
+		$dbw->commit( __METHOD__ );
+		# Update memcache after the commit
+		$this->invalidateCache();
+		if ( $exists ) {
+			# Invalidate the cache for the description page
+			$descTitle->invalidateCache();
+			$descTitle->purgeSquid();
 		} else {
-			// Make the description page and RC log entry post-commit
-			$newPageContent = ContentHandler::makeContent( $pageText, $descTitle );
-		}
-
-		# Defer purges, page creation, and link updates in case they error out.
-		# The most important thing is that files and the DB registry stay synced.
-		$dbw->endAtomic( __METHOD__ );
-		# Do some cache purges after final commit so that:
-		# a) Changes are more likely to be seen post-purge
-		# b) They won't cause rollback of the log publish/update above
-		$that = $this;
-		$dbw->onTransactionIdle( function () use (
-			$that, $reupload, $wikiPage, $newPageContent, $comment, $user, $logEntry, $logId, $descId, $tags
-		) {
-			# Update memcache after the commit
-			$that->invalidateCache();
-			$updateLogPage = false;
-			if ( $newPageContent ) {
-				# New file page; create the description page.
-				# There's already a log entry, so don't make a second RC entry
-				# CDN and file cache for the description page are purged by doEditContent.
-				$status = $wikiPage->doEditContent(
-					$newPageContent,
-					$comment,
-					EDIT_NEW | EDIT_SUPPRESS_RC,
-					false,
-					$user
-				);
-				if ( isset( $status->value['revision'] ) ) {
-					// Associate new page revision id
-					$logEntry->setAssociatedRevId( $status->value['revision']->getId() );
-				}
-				// This relies on the resetArticleID() call in WikiPage::insertOn(),
-				// which is triggered on $descTitle by doEditContent() above.
-				if ( isset( $status->value['revision'] ) ) {
-					/** @var $rev Revision */
-					$rev = $status->value['revision'];
-					$updateLogPage = $rev->getPage();
-				}
-			} else {
-				# Existing file page: invalidate description page cache
-				$wikiPage->getTitle()->invalidateCache();
-				$wikiPage->getTitle()->purgeSquid();
-				# Allow the new file version to be patrolled from the page footer
-				Article::purgePatrolFooterCache( $descId );
-			}
-			# Update associated rev id. This should be done by $logEntry->insert() earlier,
-			# but setAssociatedRevId() wasn't called at that point yet...
-			$logParams = $logEntry->getParameters();
-			$logParams['associated_rev_id'] = $logEntry->getAssociatedRevId();
-			$update = [ 'log_params' => LogEntryBase::makeParamBlob( $logParams ) ];
-			if ( $updateLogPage ) {
-				# Also log page, in case where we just created it above
-				$update['log_page'] = $updateLogPage;
-			}
-			$that->getRepo()->getMasterDB()->update(
-				'logging',
-				$update,
-				[ 'log_id' => $logId ],
-				__METHOD__
+			# New file; create the description page.
+			# There's already a log entry, so don't make a second RC entry
+			# Squid and file cache for the description page are purged by doEditContent.
+			$content = ContentHandler::makeContent( $pageText, $descTitle );
+			$status = $wikiPage->doEditContent(
+				$content,
+				$comment,
+				EDIT_NEW | EDIT_SUPPRESS_RC,
+				false,
+				$user
 			);
-			$that->getRepo()->getMasterDB()->insert(
-				'log_search',
-				[
-					'ls_field' => 'associated_rev_id',
-					'ls_value' => $logEntry->getAssociatedRevId(),
-					'ls_log_id' => $logId,
-				],
-				__METHOD__
-			);
-			# Add change tags, if any
-			if ( $tags ) {
-				$logEntry->setTags( $tags );
-			}
-			# Uploads can be patrolled
-			$logEntry->setIsPatrollable( true );
-			# Now that the log entry is up-to-date, make an RC entry.
+			$dbw->begin( __METHOD__ ); // XXX; doEdit() uses a transaction
+			// Now that the page exists, make an RC entry.
 			$logEntry->publish( $logId );
-			# Run hook for other updates (typically more cache purging)
-			Hooks::run( 'FileUpload', [ $that, $reupload, !$newPageContent ] );
-			if ( $reupload ) {
-				# Delete old thumbnails
-				$that->purgeThumbnails();
-				# Remove the old file from the CDN cache
-				DeferredUpdates::addUpdate(
-					new CdnCacheUpdate( [ $that->getUrl() ] ),
-					DeferredUpdates::PRESEND
+			if ( isset( $status->value['revision'] ) ) {
+				$dbw->update( 'logging',
+					array( 'log_page' => $status->value['revision']->getPage() ),
+					array( 'log_id' => $logId ),
+					__METHOD__
 				);
-			} else {
-				# Update backlink pages pointing to this title if created
-				LinksUpdate::queueRecursiveJobsForTable( $that->getTitle(), 'imagelinks' );
 			}
-		} );
-		if ( !$reupload ) {
-			# This is a new file, so update the image count
-			DeferredUpdates::addUpdate( SiteStatsUpdate::factory( [ 'images' => 1 ] ) );
+			$dbw->commit( __METHOD__ ); // commit before anything bad can happen
 		}
+		if ( $reupload ) {
+			# Delete old thumbnails
+			$this->purgeThumbnails();
+			# Remove the old file from the squid cache
+			SquidUpdate::purge( array( $this->getURL() ) );
+		}
+		# Hooks, hooks, the magic of hooks...
+		Hooks::run( 'FileUpload', array( $this, $reupload, $descTitle->exists() ) );
 		# Invalidate cache for all pages using this file
-		DeferredUpdates::addUpdate( new HTMLCacheUpdate( $this->getTitle(), 'imagelinks' ) );
-
+		$update = new HTMLCacheUpdate( $this->getTitle(), 'imagelinks' );
+		$update->doUpdate();
+		if ( !$reupload ) {
+			LinksUpdate::queueRecursiveJobsForTable( $this->getTitle(), 'imagelinks' );
+		}
 		return true;
 	}
 
