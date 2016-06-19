@@ -154,8 +154,20 @@ $wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-by-sa.png";
 $wgDiff3 = "/usr/bin/diff3";
 
 # The following permissions were set based on your choice in the installer
+$wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createaccount'] = true;
-$wgGroupPermissions['*']['edit'] = true;
+$wgGroupPermissions['user']['edit'] = true;
+$wgGroupPermissions['sysop']['edit'] = true;
+
+
+# Anonymous users can't create pages
+$wgGroupPermissions['*']['createpage'] = false;
+
+# Only users with accounts four days old or older can create pages
+# Requires MW 1.6 or higher.
+$wgGroupPermissions['*'            ]['createpage'] = false;
+$wgGroupPermissions['user'         ]['createpage'] = false;
+$wgGroupPermissions['autoconfirmed']['createpage'] = true;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
