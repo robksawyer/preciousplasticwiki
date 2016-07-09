@@ -208,6 +208,7 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
+wfLoadExtension( 'Nuke' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
