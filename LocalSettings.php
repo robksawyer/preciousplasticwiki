@@ -209,6 +209,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Nuke' );
+wfLoadExtension( 'SmiteSpam' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
@@ -310,7 +311,7 @@ require_once("$IP/extensions/HTMLets/HTMLets.php");
 $wgHTMLetsDirectory = "$IP/htmlets";
 
 //SmiteSpam
-require_once("$IP/extensions/SmiteSpam/SmiteSpam.php");
+// require_once("$IP/extensions/SmiteSpam/SmiteSpam.php");
 
 //FontAwesome
 // require_once("$IP/extensions/FontAwesome/FontAwesome.php");
