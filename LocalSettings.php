@@ -350,6 +350,9 @@ $wgPdfPostProcessor = $wgImageMagickConvertCommand; // if defined via ImageMagic
 $wgPdfInfo = "$IP/bin/pdfinfo";
 $wgPdftoText = "$IP/bin/pdftotext";
 
+# SmiteSpam: https://www.mediawiki.org/wiki/Extension:SmiteSpam
+require_once "$IP/extensions/SmiteSpam/SmiteSpam.php";
+
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
 ##
