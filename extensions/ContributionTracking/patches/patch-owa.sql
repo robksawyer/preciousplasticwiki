@@ -10,5 +10,3 @@
 -- 	ALTER TABLE /*_*/contribution_tracking ADD owa_ref INTEGER default NULL;
 -- EXCEPTION
 -- 	WHEN owa_ref THEN RAISE NOTICE 'column <owa_session> already exists in contribution_tracking.';
-BEGIN
-END;
