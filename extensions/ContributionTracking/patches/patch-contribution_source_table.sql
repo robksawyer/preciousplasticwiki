@@ -2,15 +2,16 @@
 
 -- TODO: more better table name?
 create table contribution_source (
-    contribution_tracking_id int unsigned not null,
+    contribution_tracking_id int check (contribution_tracking_id > 0) not null,
     banner varchar(128),
     landing_page varchar(128),
     payment_method varchar(128),
-    primary key (contribution_tracking_id),
-    index banner (banner),
-    index landing_page (landing_page),
-    index payment_method (payment_method)
+    primary key (contribution_tracking_id)
 );
+
+create index banner on contribution_source (banner);
+create index landing_page on contribution_source (landing_page);
+create index payment_method on contribution_source (payment_method);
 
 -- Backfill existing rows.
 replace into contribution_source
@@ -42,13 +43,12 @@ begin
     ) then
         -- Split column into its components.
         replace into contribution_source
-        set
-            contribution_tracking_id = last_insert_id(),
-            banner = substring_index(new.utm_source, '.', 1),
-            landing_page = substring_index(substring_index(new.utm_source, '.', 2), '.', -1),
-            payment_method = substring_index(new.utm_source, '.', -1);
+            contribution_tracking_id := last_insert_id(),
+            banner := substring_index(new.utm_source, '.', 1),
+            landing_page := substring_index(substring_index(new.utm_source, '.', 2), '.', -1),
+            payment_method := substring_index(new.utm_source, '.', -1);
     end if;
-end
+end;
 //
 
 create trigger contribution_tracking_update
@@ -62,13 +62,12 @@ begin
     ) then
         -- Split column into its components.
         replace into contribution_source
-        set
-            contribution_tracking_id = new.id,
-            banner = substring_index(new.utm_source, '.', 1),
-            landing_page = substring_index(substring_index(new.utm_source, '.', 2), '.', -1),
-            payment_method = substring_index(new.utm_source, '.', -1);
+            contribution_tracking_id := new.id,
+            banner := substring_index(new.utm_source, '.', 1),
+            landing_page := substring_index(substring_index(new.utm_source, '.', 2), '.', -1),
+            payment_method := substring_index(new.utm_source, '.', -1);
     end if;
-end
+end;
 //
 
 -- Note there is no delete on contribution_tracking, hence no third trigger.
