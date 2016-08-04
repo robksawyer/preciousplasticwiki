@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Cwlin0416",
+			"LNDDYL"
+		]
+	},
+	"smitespam-delete": "刪除",
+	"smitespam-delete-page-success-msg": "已刪除 \"$1\" 頁面。",
+	"smitespam-delete-page-failure-msg": "刪除 \"$1\" 頁面失敗。",
+	"smitespam-probability-low": "低",
+	"smitespam-probability-medium": "中",
+	"smitespam-probability-high": "高",
+	"smitespam-probability-very-high": "非常高",
+	"smitespam-block": "封鎖"
+}

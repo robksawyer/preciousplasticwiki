@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"smitespam": "Jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
+	"smitespam-desc": "Brängg_ene [[Special:SmiteSpam|{{int:speciapage}}]] en et Wikki, öm de Wikki_Köhbeße ze hällve, Sigge met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ze fenge un fott ze schmihße.",
+	"smitespam-spam-pages-list-heading": "Müjjejesche Sigge met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
+	"smitespam-delete": "Fottschmiiße",
+	"smitespam-delete-page-success-msg": "Di Sigg „$1“ es fottjeschmeße",
+	"smitespam-delete-page-failure-msg": "Mer kunnte di Sigg  „$1“ nit fott schmiiße.",
+	"smitespam-created-by": "Aanjelaht vum{{GENDER:$1|}}",
+	"smitespam-deleted-reason": "Vum Zohsazprorjamm jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> als <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ennjeschtohf.",
+	"action-smitespam": "bruch e Zohsazprojamm jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
+	"smitespam-probability-low": "Kleijn",
+	"smitespam-probability-medium": "Meddel",
+	"smitespam-probability-high": "Huh",
+	"smitespam-probability-very-high": "Ärsch huh",
+	"smitespam-select": "Ußsöhke:",
+	"smitespam-already-trusted": "{{GENDER:$1|Däm|Däm|Däm Metmaacher|Dä|Däm}} „$1“ vertroue mer alld.",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|Dä|Dä|Dä Metmaacher|Dä|Dä}} „$1“ jidd_et nit.",
+	"smitespam-add-user-label": "Donn ene Metmaacher derbei:",
+	"smitespam-trust": "Vertroue",
+	"smitespam-timestamp": "Dattum un Zigg",
+	"smitespam-remove": "Fott nämme"
+}

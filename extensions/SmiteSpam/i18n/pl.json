@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Mbkgacek"
+		]
+	},
+	"smitespam-spam-pages-list-heading": "Możliwe strony ze spamem",
+	"smitespam-delete": "Usuń",
+	"smitespam-delete-page-success-msg": "Usunięta strona „$1”.",
+	"smitespam-delete-page-failure-msg": "Nie udało się usunąć strony „$1”.",
+	"smitespam-probability-low": "Niskie",
+	"smitespam-probability-medium": "Średnie",
+	"smitespam-probability-high": "Wysokie",
+	"smitespam-probability-very-high": "Bardzo duże",
+	"smitespam-select": "Wybierz:",
+	"smitespam-add-user-label": "Dodaj użytkownika:",
+	"smitespam-timestamp": "Sygnatura czasowa",
+	"smitespam-remove": "Usuń",
+	"smitespam-block": "Zablokuj",
+	"smitespam-blocked": "Zablokowany"
+}
