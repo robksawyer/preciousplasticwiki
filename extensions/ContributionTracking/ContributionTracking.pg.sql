@@ -22,4 +22,3 @@ CREATE UNIQUE INDEX contribution_tracking_index1 ON contribution_tracking(contri
 CREATE UNIQUE INDEX contribution_tracking_index2 ON contribution_tracking(ts);
 
 COMMIT;
-
