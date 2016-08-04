@@ -309,6 +309,9 @@ $wgAllowImageMoving = true;
 require_once("$IP/extensions/HTMLets/HTMLets.php");
 $wgHTMLetsDirectory = "$IP/htmlets";
 
+//SmiteSpam
+require_once("$IP/extensions/SmiteSpam/SmiteSpam.php");
+
 //FontAwesome
 // require_once("$IP/extensions/FontAwesome/FontAwesome.php");
 
