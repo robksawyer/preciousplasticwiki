@@ -194,7 +194,7 @@ wfLoadSkin( 'Vector' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
-wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtension( 'ConfirmEdit', 'ConfirmEdit/ReCaptcha' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
@@ -300,6 +300,11 @@ $wgLocalFileRepo = array(
 	'cloudFrontUrl' => $wgCloudFrontUrl
 );
 
+//https://www.mediawiki.org/wiki/Extension:ConfirmEdit
+$wgCaptchaClass = 'ReCaptcha';
+$wgReCaptchaPublicKey = getenv('RECAPTCHA_SITE_KEY');
+$wgReCaptchaPrivateKey = getenv('RECAPTCHA_SECRET_KEY');
+
 $wgAllowImageMoving = true;
 
 // s3 filesystem repo - end
@@ -349,6 +354,7 @@ $wgPdftoText = "$IP/bin/pdftotext";
 
 # SmiteSpam: https://www.mediawiki.org/wiki/Extension:SmiteSpam
 require_once "$IP/extensions/SmiteSpam/SmiteSpam.php";
+
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
