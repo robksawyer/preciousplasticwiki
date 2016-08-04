@@ -14,4 +14,4 @@ DO $$
 				WHEN owa_ref THEN RAISE NOTICE 'column <owa_session> already exists in contribution_tracking.';
 			END;
 	END;
-END $$;
+$$;
