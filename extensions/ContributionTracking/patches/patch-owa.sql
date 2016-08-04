@@ -1,7 +1,7 @@
 --
 -- create contribution_tracking.owa_session and owa_ref
 --
-DO $$
+DO $$;
   BEGIN
       BEGIN
 				ALTER TABLE /*_*/contribution_tracking ADD owa_session VARCHAR(255) default NULL;
