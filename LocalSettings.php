@@ -251,10 +251,12 @@ $wgSpamBlacklistFiles = array(
 
 # Extension:TitleBlacklist
 # https://www.mediawiki.org/wiki/Extension:TitleBlacklist
+// Apply to all, not just anonymous users.
+$wgGroupPermissions['sysop']['tboverride'] = false;
 $wgTitleBlacklistSources = array(
 	array(
-		'type' => 'localpage',
-		'src'	=> 'MediaWiki:Titleblacklist',
+		'type' => TBLSRC_LOCALPAGE,
+		'src'	=> 'MediaWiki:Titleblacklist'
 	),
 	array(
 		'type' => 'url',
