@@ -258,11 +258,7 @@ $wgTitleBlacklistSources = array(
 	),
 	array(
 		'type' => 'url',
-		'src'	=> 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
-	),
-	array(
-		'type' => 'file',
-		'src'	=> '/home/wikipedia/blacklists/titles',
+		'src'	=> 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw'
 	)
 );
 
