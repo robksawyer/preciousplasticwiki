@@ -40,7 +40,7 @@ $wgServer = getenv('SITE_SERVER');
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
 
-## The URL path to the logo.  Make sure you change this from the default,
+## The URL path to the logo.	Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogo = getenv('SITE_LOGO_URL');
 
@@ -175,7 +175,7 @@ $wgDefaultSkin = "vector";
 
 $wgFileExtensions = array(
 	'png', 'gif', 'jpg', 'jpeg', 'tiff',
-	'ai', 'xls', 'pdf',  'xlsx',
+	'ai', 'xls', 'pdf',	'xlsx',
 	'f3d', 'svg', 'igs', 'step', 'stl', 'iges',
 	'sat', 'smt'
 );
@@ -209,6 +209,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Nuke' );
+wfLoadExtension( 'TitleBlacklist' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
@@ -248,14 +249,31 @@ $wgSpamBlacklistFiles = array(
 	"https://en.wikipedia.org/wiki/MediaWiki:Spam-blacklist"
 );
 
+# Extension:TitleBlacklist
+# https://www.mediawiki.org/wiki/Extension:TitleBlacklist
+$wgTitleBlacklistSources = array(
+	array(
+		'type' => 'localpage',
+		'src'	=> 'MediaWiki:Titleblacklist',
+	),
+	array(
+		'type' => 'url',
+		'src'	=> 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
+	),
+	array(
+		'type' => 'file',
+		'src'	=> '/home/wikipedia/blacklists/titles',
+	)
+);
+
 //Email
 // $wgSMTP = array(
-//  'host'     => "smtp.postmarkapp.com", 						// could also be an IP address. Where the SMTP server is located
-//  'IDHost'   => "lathe-tools.herokuapp.com",				// Generally this will be the domain name of your website (aka mywiki.org)
-//  'port'     => 25,																// Port to use when connecting to the SMTP server
-//  'auth'     => true,															// Should we use SMTP authentication (true or false)
-//  'username' => getenv('POSTMARK_API_TOKEN'),			// Username to use for SMTP authentication (if being used)
-//  'password' => getenv('POSTMARK_API_TOKEN')				// Password to use for SMTP authentication (if being used)
+//	'host'		 => "smtp.postmarkapp.com", 						// could also be an IP address. Where the SMTP server is located
+//	'IDHost'	 => "lathe-tools.herokuapp.com",				// Generally this will be the domain name of your website (aka mywiki.org)
+//	'port'		 => 25,																// Port to use when connecting to the SMTP server
+//	'auth'		 => true,															// Should we use SMTP authentication (true or false)
+//	'username' => getenv('POSTMARK_API_TOKEN'),			// Username to use for SMTP authentication (if being used)
+//	'password' => getenv('POSTMARK_API_TOKEN')				// Password to use for SMTP authentication (if being used)
 // );
 $wgSMTP = array(
 	'host' => 'smtp.sendgrid.net',
