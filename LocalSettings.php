@@ -364,6 +364,9 @@ require_once "$IP/extensions/SmiteSpam/SmiteSpam.php";
 
 // $wgDonationInterfaceEnableAmazon = true;
 
+//https://www.mediawiki.org/wiki/Manual:$wgAccountCreationThrottle
+$wgAccountCreationThrottle = 1;
+
 ##
 # Semantic MediaWiki Requirements
 ##
