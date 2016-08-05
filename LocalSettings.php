@@ -210,6 +210,7 @@ wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'TitleBlacklist' );
+wfLoadExtension( 'TorBlock' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
