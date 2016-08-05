@@ -209,7 +209,7 @@ wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Nuke' );
-wfLoadExtension( 'TitleBlacklist' );
+// wfLoadExtension( 'TitleBlacklist' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
@@ -252,17 +252,17 @@ $wgSpamBlacklistFiles = array(
 # Extension:TitleBlacklist
 # https://www.mediawiki.org/wiki/Extension:TitleBlacklist
 // Apply to all, not just anonymous users.
-$wgGroupPermissions['sysop']['tboverride'] = false;
-$wgTitleBlacklistSources = array(
-	array(
-		'type' => TBLSRC_LOCALPAGE,
-		'src'	=> 'MediaWiki:Titleblacklist'
-	),
-	array(
-		'type' => 'url',
-		'src'	=> 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw'
-	)
-);
+// $wgGroupPermissions['sysop']['tboverride'] = false;
+// $wgTitleBlacklistSources = array(
+// 	array(
+// 		'type' => TBLSRC_LOCALPAGE,
+// 		'src'	=> 'MediaWiki:Titleblacklist'
+// 	),
+// 	array(
+// 		'type' => 'url',
+// 		'src'	=> 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw'
+// 	)
+// );
 
 //Email
 // $wgSMTP = array(
