@@ -6,8 +6,7 @@
 			"Tgr",
 			"Tacsipacsi",
 			"Csega",
-			"Ildiko Santana",
-			"Máté"
+			"Ildiko Santana"
 		]
 	},
 	"action-titleblacklistlog": "címek feketelista-naplójának megtekintése",
@@ -21,7 +20,7 @@
 	"titleblacklist-forbidden-new-account": "A(z) „$2” felhasználói név nem hozható létre.\nIlleszkedik a következő feketelistás elemre: <code>$1</code>",
 	"titleblacklist-invalid": "Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a lapcímek feketelistájában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:",
 	"titleblacklist-override": "Feketelista figyelmen kívül hagyása",
-	"right-tboverride": "címek és felhasználónevek feketelistájának felülírása",
+	"right-tboverride": "Címek és felhasználónevek feketelistájának felülírása",
 	"right-tboverride-account": "Felhasználónév-feketelista felülbírálása",
-	"right-titleblacklistlog": "címek feketelista-naplójának megtekintése"
+	"right-titleblacklistlog": "Címek feketelista-naplójának megtekintése"
 }
