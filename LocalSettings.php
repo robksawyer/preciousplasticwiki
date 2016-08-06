@@ -375,6 +375,11 @@ require_once "$IP/extensions/SmiteSpam/SmiteSpam.php";
 # TorBlock: https://www.mediawiki.org/wiki/Extension:TorBlock
 require_once "$IP/extensions/TorBlock/TorBlock.php";
 
+# AbuseFilter: https://www.mediawiki.org/wiki/Extension:AbuseFilter
+require_once "$IP/extensions/AbuseFilter/AbuseFilter.php";
+
+# Bad Behavior: http://bad-behavior.ioerror.us/support/installation/mediawiki/
+require_once "$IP/extensions/bad-behavior/bad-behavior-mediawiki.php";
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
