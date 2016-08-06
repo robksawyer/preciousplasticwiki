@@ -210,7 +210,6 @@ wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'LocalS3Repo' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'TitleBlacklist' );
-wfLoadExtension( 'TorBlock' );
 // wfLoadExtension( 'LabeledSectionTransclusion' ); #borked
 // wfLoadExtension( 'DonationInterface' ); #borked
 
@@ -372,6 +371,9 @@ $wgPdftoText = "$IP/bin/pdftotext";
 
 # SmiteSpam: https://www.mediawiki.org/wiki/Extension:SmiteSpam
 require_once "$IP/extensions/SmiteSpam/SmiteSpam.php";
+
+# TorBlock: https://www.mediawiki.org/wiki/Extension:TorBlock
+require_once "$IP/extensions/TorBlock/TorBlock.php";
 
 
 ##
