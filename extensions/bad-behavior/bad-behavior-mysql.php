@@ -18,7 +18,7 @@ function bb2_table_structure($name)
 							user_agent TEXT NOT NULL,
 							request_entity TEXT NOT NULL,
 							key TEXT NOT NULL);
-					CREATE INDEX(ip(15)),
+					CREATE INDEX(`ip`(15)),
 							INDEX(`user_agent`(10)),
 							PRIMARY KEY(id);";
 
