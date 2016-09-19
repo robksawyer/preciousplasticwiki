@@ -8,7 +8,7 @@ function bb2_table_structure($name)
 
 	return "CREATE SEQUENCE $name_escaped"."_seq;
 					CREATE TABLE IF NOT EXISTS $name_escaped (
-							id INT NOT NULL default nextval ('".$name_escaped."_seq"."'),
+							id INT NOT NULL default nextval ('".$name_escaped."_seq"."') PRIMARY KEY,
 							ip TEXT NOT NULL,
 							date TIMESTAMP(0) NOT NULL default '0000-00-00 00:00:00',
 							request_method TEXT NOT NULL,
@@ -17,10 +17,10 @@ function bb2_table_structure($name)
 							http_headers TEXT NOT NULL,
 							user_agent TEXT NOT NULL,
 							request_entity TEXT NOT NULL,
-							key TEXT NOT NULL);
-					CREATE INDEX(`ip`(15)),
-							INDEX(`user_agent`(10)),
-							PRIMARY KEY(id);";
+							key TEXT NOT NULL
+						);
+					CREATE INDEX `ip` on $name_escaped(`ip`);
+					CREATE INDEX `user_agent` on $name_escaped(`user_agent`);";
 
 	// return "CREATE TABLE IF NOT EXISTS `$name_escaped` (
 	// 	`id` INT(11) NOT NULL auto_increment,
