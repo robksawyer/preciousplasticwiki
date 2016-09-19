@@ -60,6 +60,6 @@ function bb2_insert($settings, $package, $key)
 		}
 	}
 	return "INSERT INTO `" . bb2_db_escape($settings['log_table']) . "`
-		(`ip`, `date`, `request_method`, `request_uri`, `server_protocol`, `http_headers`, `user_agent`, `request_entity`, `key`) VALUES
+		(ip, date, request_method, request_uri, server_protocol, http_headers, user_agent, request_entity, key) VALUES
 		('$ip', '$date', '$request_method', '$request_uri', '$server_protocol', '$headers', '$user_agent', '$request_entity', '$key')";
 }
