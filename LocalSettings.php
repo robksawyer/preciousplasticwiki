@@ -380,7 +380,7 @@ require_once "$IP/extensions/TorBlock/TorBlock.php";
 require_once "$IP/extensions/AbuseFilter/AbuseFilter.php";
 
 # Bad Behavior: http://bad-behavior.ioerror.us/support/installation/mediawiki/
-require_once "$IP/extensions/bad-behavior/bad-behavior-mediawiki.php";
+// require_once "$IP/extensions/bad-behavior/bad-behavior-mediawiki.php";
 
 ##
 # @url https://www.mediawiki.org/wiki/Extension:DonationInterface
