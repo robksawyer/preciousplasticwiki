@@ -17,10 +17,10 @@ function bb2_table_structure($name)
 							http_headers TEXT NOT NULL,
 							user_agent TEXT NOT NULL,
 							request_entity TEXT NOT NULL,
-							key TEXT NOT NULL;
-					CREATE INDEX (ip(15)),
-							INDEX (`user_agent`(10)),
-							PRIMARY KEY (id) );";
+							key TEXT NOT NULL);
+					CREATE INDEX(ip(15)),
+							INDEX(`user_agent`(10)),
+							PRIMARY KEY(id);";
 
 	// return "CREATE TABLE IF NOT EXISTS `$name_escaped` (
 	// 	`id` INT(11) NOT NULL auto_increment,
