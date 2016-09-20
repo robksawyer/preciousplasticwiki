@@ -407,3 +407,5 @@ $wgAccountCreationThrottle = 1;
 # Semantic MediaWiki Requirements
 ##
 enableSemantics( getenv('SITE_URL') );
+
+$wgShowExceptionDetails = true;
