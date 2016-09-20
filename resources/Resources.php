@@ -424,6 +424,7 @@ return array(
 		'group' => 'jquery.ui',
 	),
 	'jquery.ui.datepicker' => array(
+		'position' => 'top',
 		'scripts' => 'resources/lib/jquery.ui/jquery.ui.datepicker.js',
 		'dependencies' => 'jquery.ui.core',
 		'skinStyles' => array(

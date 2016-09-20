@@ -18,9 +18,9 @@ function bb2_table_structure($name)
 						user_agent TEXT NOT NULL,
 						request_entity TEXT NOT NULL,
 						key TEXT NOT NULL
-					);
-					CREATE INDEX ip on $name_escaped(ip);
-					CREATE INDEX user_agent on $name_escaped(user_agent);";
+					);";
+	//CREATE INDEX ip on $name_escaped(ip);
+	//CREATE INDEX user_agent on $name_escaped(user_agent);
 
 	// return "CREATE TABLE IF NOT EXISTS `$name_escaped` (
 	// 	`id` INT(11) NOT NULL auto_increment,
