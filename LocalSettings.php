@@ -57,7 +57,7 @@ $wgEnotifWatchlist = true; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-if (False) {
+if (True) {
 	$wgDBtype = "postgres";
 	$wgDBserver = getenv('DATABASE_SERVER');
 	$wgDBname = getenv('DATABASE_NAME');
