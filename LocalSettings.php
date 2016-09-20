@@ -57,14 +57,25 @@ $wgEnotifWatchlist = true; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "postgres";
-$wgDBserver = getenv('DATABASE_SERVER');
-$wgDBname = getenv('DATABASE_NAME');
-$wgDBuser = getenv('DATABASE_USER');
-$wgDBpassword = getenv('DATABASE_PASSWORD');
+if (False) {
+	$wgDBtype = "postgres";
+	$wgDBserver = getenv('DATABASE_SERVER');
+	$wgDBname = getenv('DATABASE_NAME');
+	$wgDBuser = getenv('DATABASE_USER');
+	$wgDBpassword = getenv('DATABASE_PASSWORD');
 
-# Postgres specific settings
-$wgDBport = "5432";
+	# Postgres specific settings
+	$wgDBport = "5432";
+} else {
+	$wgDBtype           = "mysql";
+	$wgDBserver         = getenv('MYSQL_SERVER');
+	$wgDBname           = getenv('MYSQL_DATABASE');
+	$wgDBuser           = getenv('MYSQL_DATABASE_USER');
+	$wgDBpassword       = getenv('MYSQL_DATABASE_PASSWORD');
+	$wgDBmysql5         = True; # is important for correct UTF-8 handling.
+	$wgDBport 					= "3306";
+}
+
 $wgDBmwschema = "mediawiki";
 
 ## Shared memory settings
